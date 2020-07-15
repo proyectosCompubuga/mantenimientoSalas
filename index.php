@@ -7,6 +7,14 @@
 
     }else{
         echo 'el numero' .$numero.' no es par';
+
+    }
+$sum=0;
+$ar=0;
+$ab=0;
+
+    function suma(){
+        echo 'osdo';
     }
     
     
