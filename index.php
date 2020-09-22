@@ -1,6 +1,4 @@
 <?php
-    header('Location: seguridad/loginVista.php');
-
-    h
+    header('Location: seguridad/loginVista.php');   
     
 ?>
