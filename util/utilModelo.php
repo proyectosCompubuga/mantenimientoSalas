@@ -28,11 +28,13 @@ class utilModelo
       $condiciones = ($i == (count($nombreCampo)-1)) ? $condiciones."`".$nombreCampo[$i]."` = '".$valores[$i]."'" : $condiciones."`".$nombreCampo[$i]."`= '".$valores[$i]."' AND ";
     }
     $consulta = "SELECT * FROM $tabla  $condiciones";
-  //echo "consulta: ".$consulta;
+  echo "consulta: ".$consulta;
 //    die();
 
     $query = mysqli_query($link, $consulta);
+    $row_cnt = mysqli_num_rows($query);
     return $query;
+    echo "osdo".$row_cnt;
   }
   function mostrarTodosRegistros($tabla) { //funcion para mostrar todos los registros sin condiciones
     global $link;
