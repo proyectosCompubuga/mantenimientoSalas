@@ -6,6 +6,7 @@
         $util1->validarRuta(4);
     }
 ?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
@@ -134,7 +135,7 @@
                                 </div>
 
                                 <div class="form-group" id="pass">
-                                    <input type="password" name="password" onkeyup="validarPassword(); id="password" tabindex="2"
+                                    <input type="password" name="password" onkeyup="validarPassword();" id="password" tabindex="2"
                                            class="form-control" placeholder="Contraseña">
                                 </div>
                                 <div class="form-group" id="pass1">
