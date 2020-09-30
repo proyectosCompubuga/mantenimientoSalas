@@ -68,7 +68,7 @@
                                             <div class="text-center">
                                                 <a href="../restaurarPassword/restaurarPasswordVista.php" tabindex="5"
                                                    class="forgot-password">¿Has olvidado tu contraseña?</a>
-                                         </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
