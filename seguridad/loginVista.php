@@ -11,11 +11,13 @@
 <head>
 
     <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- <LINK REL=StyleSheet HREF="css/pruebaLogin.css" TYPE="text/css" MEDIA=screen>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link href="../css/estiloLogin.css" rel="stylesheet" id="estiloLogin">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="../js/login.js"></script>
+    <script src="../js/login.js"></script>   -->
     <title>INICIO</title>
 </head>
 <body>
@@ -24,11 +26,7 @@
         <div class="col-md-6 col-md-offset-3">
             <div class="panel panel-login">
                 <div class="panel-heading">
-                    <div class="row">
-                        <div class="col-xs-6">
-                        <a href="#" class="active" id="login-form-link">Inicio de sesión</a> 
-                        </div>
-                    </div>
+
                     <hr>
                 </div>
                 <div class="panel-body">
@@ -37,7 +35,19 @@
                             <!-- ************INCIAR SESION******* INICIO ***** -->
                             <form id="login-form" action="loguinControlador.php" method="post" role="form"
                                   style="display: block;">
-                                <div class="form-group">
+                                  
+                                  <div class="container" >
+                                      
+     <div class="row"> 
+        <div class="col-md-6 offset-md-4 mt-5"> 
+        <form action="" method="post">
+           
+           <div class="card border-success mb-3" style="max-width: 18rem;">
+            <div class="card-body text-success">
+                <h5 class="card-title">Iniciar sesion</h5>
+
+               <form>
+               <div class="form-group">
                                     <input type="text" name="username" id="username" tabindex="1" class="form-control"
                                            placeholder="Usuario" value="">
                                 </div>
@@ -47,10 +57,9 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="row">
-                                        <div class="col-sm-6 col-sm-offset-3">
-                                            <input type="submit" name="login-submit" id="login-submit" tabindex="4"
-                                                   class="form-control btn btn-login" value="Iniciar sesión">
-                                        </div>
+                                    <div class="card-footer bg-transparent border-success">
+                                    <button type="submit" class="btn btn-success"name="enviarsesion">Inisiar sesion</button>
+                                       
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -63,6 +72,12 @@
                                         </div>
                                     </div>
                                 </div>
+         </form>
+        </div> 
+     </div>
+    </div>
+
+
                               
                             </form>
                             <!-- ************INCIAR SESION******* FIN ***** -->
