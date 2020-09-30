@@ -22,7 +22,6 @@
     <title>compubuga</title>
   </head>
   <body>
-    <?php  include_once "navbar.php";?>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
