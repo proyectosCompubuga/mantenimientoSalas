@@ -5,175 +5,68 @@
     $util = new util();
     $util->validarRuta(0);
 ?>
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
-<head>
-  		<!-- Mobile Specific Meta -->
-  		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  		<!-- Favicon-->
-  		<link rel="shortcut icon" href="../img/fav.png">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  		<!-- Meta Keyword -->
-  		<meta name="keywords" content="">
-  		<!-- meta character set -->
-  		<meta charset="UTF-8">
-  		<!-- Site Title -->
-  		<title>Calzado Karol Bucaramanga</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-  		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
-  			<!--
-  			CSS
-  			============================================= -->
-  			<link rel="stylesheet" href="../css/linearicons.css">
-  			<link rel="stylesheet" href="../css/font-awesome.min.css">
-  			<link rel="stylesheet" href="../css/bootstrap.css">
-  			<link rel="stylesheet" href="../css/magnific-popup.css">
-  			<link rel="stylesheet" href="../css/jquery-ui.css">
-  			<link rel="stylesheet" href="../css/nice-select.css">
-  			<link rel="stylesheet" href="../css/animate.min.css">
-  			<link rel="stylesheet" href="../css/owl.carousel.css">
-  			<link rel="stylesheet" href="../css/main.css">
+    <title>compubuga</title>
+  </head>
+  <body>
+    
 
-</head>
-<body>
-<?php
-    include "../componentes/menuPrincipal.php";
-?>
-<!-- start banner Area -->
-<section class="about-banner">
-  <div class="container">
-    <div class="row d-flex align-items-center justify-content-center">
-      <div class="about-content col-lg-12">
-        <h1 class="text-white">
-          Bienvenido
-        </h1>
-        <p class="text-white link-nav"><a href="index.html">Menu Principal </a> </a></p>
-      </div>
-    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+  <a class="navbar-brand" href="#">compubuga</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#">inicio <!-- <span class="sr-only">(current)</span>--></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Areas</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">datos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">reportar</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="adminUsuarios.php">registrar</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          perfil
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">usuario</a>
+          <a class="dropdown-item" href="#">cerrar sesion</a>
+         
+        </div>
+      </li>
+    </ul>
   </div>
-</section>
-<!-- End banner Area -->
+</nav>
+    
 
-<!-- Start price Area -->
-<section class="price-area section-gap">
-  <div class="container">
-
-    <div class="row">
-      <div class="col-lg-2 col-md-6 single-price">
-        <div class="top-part">
-          <h1 class="package-no">C</h1>
-          <h4>Clientes</h4>
-          <p class="mt-10">Datos de los clientes</p>
-        </div>
-        <div class="package-list">
-
-        </div>
-        <div class="bottom-part">
-          <h1>Ingresar</h1>
-          <a class="price-btn text-uppercase" href="../crudAlumnos/crudAlumnosVista.php">Ingresar</a>
-        </div>
-      </div>
-      <div class="col-lg-2 col-md-6 single-price">
-        <div class="top-part">
-          <h1 class="package-no">U</h1>
-          <h4>Usuarios</h4>
-          <p class="mt-10">Datos de los usuarios</p>
-        </div>
-        <div class="package-list">
-
-        </div>
-        <div class="bottom-part">
-          <h1>Ingresar</h1>
-          <a class="price-btn text-uppercase" href="../crudAlumnos/crudAlumnosVista.php">Ingresar</a>
-        </div>
-      </div>
-      <div class="col-lg-2 col-md-6 single-price">
-        <div class="top-part">
-          <h1 class="package-no">V</h1>
-          <h4>Ventas</h4>
-          <p class="mt-10">ventas y ventas diarias</p>
-        </div>
-        <div class="package-list">
-
-        </div>
-        <div class="bottom-part">
-          <h1>Ingresar</h1>
-          <a class="price-btn text-uppercase" href="../crudAlumnos/crudAlumnosVista.php">Ingresar</a>
-        </div>
-      </div>
-      <div class="col-lg-2 col-md-6 single-price">
-        <div class="top-part">
-          <h1 class="package-no">CP</h1>
-          <h4>Cuentas X pagar</h4>
-          <p class="mt-10">Datos de los alumnos</p>
-        </div>
-        <div class="package-list">
-
-        </div>
-        <div class="bottom-part">
-          <h1>Ingresar</h1>
-          <a class="price-btn text-uppercase" href="../crudAlumnos/crudAlumnosVista.php">Ingresar</a>
-        </div>
-      </div>
-      <div class="col-lg-2 col-md-6 single-price">
-        <div class="top-part">
-          <h1 class="package-no">P</h1>
-          <h4>Ingresar Productos</h4>
-          <p class="mt-10">Datos Proveedores</p>
-        </div>
-        <div class="package-list">
-
-        </div>
-        <div class="bottom-part">
-          <h1>Ingresar</h1>
-          <a class="price-btn text-uppercase" href="../crudAlumnos/crudAlumnosVista.php">Ingresar</a>
-        </div>
-        
-
-      </div>
-      <div class="col-lg-2 col-md-6 single-price">
-        <div class="top-part">
-          <h1 class="package-no">P</h1>
-          <h4>Proveedores</h4>
-          <p class="mt-10">Datos Proveedores</p>
-        </div>
-        <div class="package-list">
-
-        </div>
-        <div class="bottom-part">
-          <h1>Ingresar</h1>
-          <a class="price-btn text-uppercase" href="../crudAlumnos/crudAlumnosVista.php">Ingresar</a>
-        </div>
-        
-
-      </div>
-
-
-</section>
-<!-- End price Area -->
-
-
-<?php
-    include "../componentes/pie.php";
-?>
-            <script src="../js/vendor/jquery-2.2.4.min.js"></script>
-            <script src="../js/popper.min.js"></script>
-            <script src="../js/vendor/bootstrap.min.js"></script>
-            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
-            <script src="../js/easing.min.js"></script>
-            <script src="../js/hoverIntent.js"></script>
-            <script src="../js/superfish.min.js"></script>
-            <script src="../js/jquery.ajaxchimp.min.js"></script>
-            <script src="../js/jquery.magnific-popup.min.js"></script>
-            <script src="../js/jquery.tabs.min.js"></script>
-            <script src="../js/jquery.nice-select.min.js"></script>
-            <script src="../js/isotope.pkgd.min.js"></script>
-            <script src="../js/waypoints.min.js"></script>
-            <script src="../js/jquery.counterup.min.js"></script>
-            <script src="../js/simple-skillbar.js"></script>
-            <script src="../js/owl.carousel.min.js"></script>
-            <script src="../js/mail-script.js"></script>
-            <script src="../js/main.js"></script>
-
-</body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
 </html>
+
+
+  
+ 
+
