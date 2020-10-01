@@ -59,9 +59,9 @@
                   <label for="inputState">tipo de usuario</label>
                   <select id="cargo" name="cargo" class="form-control">
                     <option selected>tipo de usuario</option>
-                    <option>administrativo</option>
-                    <option>monitor</option>
-                    <option>tecnico reparador</option>
+                    <option value="0">administrativo</option>
+                    <option value="1">monitor</option>
+                    <option value="2">tecnico reparador</option>
 
                   </select>
                 </div>
