@@ -6,6 +6,7 @@
         $util1->validarRuta(4);
     }
 ?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
@@ -83,7 +84,76 @@
                             <!-- ************INCIAR SESION******* FIN ***** -->
 
                             <!-- ************REGISTRAR******* INICIO ***** -->
+<<<<<<< HEAD
                            
+=======
+                            <form id="register-form" action="../usuario/usuarioControlador.php" method="post"
+                                  role="form" style="display: none;">
+                                <?php
+                                    $key = $util1->generarCodigo();
+                                ?>
+                                <div class="form-group">
+                                    <input type="text" name="codigo" id="codigo" tabindex="1" class="form-control"
+                                           value="<?php echo $key; ?>" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="nombre" id="nombre" tabindex="1" class="form-control"
+                                           placeholder="Nombre Completo" value="">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="documento" id="documento" tabindex="1" class="form-control"
+                                           placeholder="Numero de Cedula" value="">
+                                </div>
+                                <div class="form-group">
+                                    Fecha de nacimiento: <input type="date" name="edad" id="edad" tabindex="1"
+                                                                class="form-control" placeholder="Fecha de nacimiento"
+                                                                value="">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="direccion" id="direccion" tabindex="1" class="form-control"
+                                           placeholder="Direccion" value="">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="telefono" id="telefono" tabindex="1" class="form-control"
+                                           placeholder="Telefono" value="">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="referido" id="referido" tabindex="1" class="form-control"
+                                           placeholder="Codigo referido" value="">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" name="email" id="email" tabindex="1" class="form-control"
+                                           placeholder="Correo electronico" value="">
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="text" name="username" id="username" tabindex="1" class="form-control"
+                                           placeholder="Usuario" value="">
+                                </div>
+
+                                <div class="form-group" id="pass">
+                                    <input type="password" name="password" onkeyup="validarPassword();" id="password" tabindex="2"
+                                           class="form-control" placeholder="Contraseña">
+                                </div>
+                                <div class="form-group" id="pass1">
+                                    <input type="password" onkeyup="validarPassword();" name="rPassword" id="rPassword"
+                                           tabindex="2" class="form-control" placeholder="Confirmar contraseña">
+                                </div>
+                                <div class="form-group hidden" id="errorPass" style="color: #ff0000; font-size: 23px;">
+                                    <br>
+                                    <img src="../img/Error-128.png" width="20" height="20"><strong> Las contraseñas no
+                                        coinciden</strong>
+                                </div>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-sm-6 col-sm-offset-3">
+                                            <input type="submit" name="guardar" id="guardar" tabindex="4"
+                                                   class="form-control btn btn-register" value="Crear cuenta">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+>>>>>>> feature/aalegrias/login
                             <!-- ************REGISTRAR******* FIN ***** -->
                         </div>
                     </div>
