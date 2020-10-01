@@ -21,6 +21,9 @@ class utilModelo
     $query = mysqli_query($link, $consulta);
     echo $consulta;
   }
+
+
+
   function mostrarregistros($tabla,$nombreCampo,$valores) {
     global $link;
     $condiciones = "WHERE";
@@ -28,12 +31,15 @@ class utilModelo
       $condiciones = ($i == (count($nombreCampo)-1)) ? $condiciones."`".$nombreCampo[$i]."` = '".$valores[$i]."'" : $condiciones."`".$nombreCampo[$i]."`= '".$valores[$i]."' AND ";
     }
     $consulta = "SELECT * FROM $tabla  $condiciones";
-  //echo "consulta: ".$consulta;
+  echo "consulta: ".$consulta;
 //    die();
 
     $query = mysqli_query($link, $consulta);
     return $query;
   }
+
+
+
   function mostrarTodosRegistros($tabla) { //funcion para mostrar todos los registros sin condiciones
     global $link;
 
@@ -43,6 +49,8 @@ class utilModelo
     return $query;
     //echo $consulta;
   }
+
+
   function modificar($tabla,$campos, $valores,$campoCondicion,$condicion) {
     global $link;
     $construccionDeValores ="";
@@ -56,6 +64,8 @@ class utilModelo
 //    die();
     return $query;
   }
+
+
   function consultarVariasTablas($campos,$tabla,$condiciones){
     global $link;
     $consulta="SELECT $campos FROM $tabla WHERE $condiciones";
@@ -63,6 +73,8 @@ class utilModelo
     //echo "$consulta";
     return $query;
   }
+
+
   function actualizarCondiciones($tabla,$campos,$condiciones){
     global $link;
 
@@ -71,6 +83,9 @@ class utilModelo
     echo "$consulta";
     return $query;
   }
+
+
+  
   function eliminarRegistros($tabla,$condiciones){
     global $link;
     $consulta="DELETE FROM $tabla WHERE $condiciones";
