@@ -14,12 +14,12 @@ $cargo=$_POST['cargo'];
 	//$campos es el nombre de los campos tal cual aparece en la base de datos
     $campos = array("id_usuario", "nombre","password", "email", "tipo_usuario");
     //$valores son los valores a almacenar
-    $valores = array("$identificacion","$nombres","$password","$Email","1");
+    $valores = array("$identificacion","$nombres","$password","$Email","$cargo");
     //la funcion insertar recive el nombre de la tabla y los dos arrays de campos y valores
     $nombreDeTabla = "usuarios";
     $utilModelo -> insertar($nombreDeTabla,$campos, $valores);
 
 $_SESSION['mensajeOk']="ok";
-header('Location: ../index.php');
+header('Location: ../crudUsuarios/Usuarios.php');
 exit();
 ?>

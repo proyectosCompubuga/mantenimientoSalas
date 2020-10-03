@@ -31,19 +31,30 @@
       <li class="nav-item">
         <a class="nav-link" href="#">reportar</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="../registrarUsuarios/registrarUsuariosVista.php">registrar</a>
-      </li>
+
       <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="../registrarUsuarios/registrarUsuariosVista.php" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          registrar
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="../crudUsuarios/usuarios.php">ver usuarios</a>
+          
+        </div>
+      </li>
+
+        <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           perfil
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="#">usuario</a>
-          <a class="dropdown-item" href="#">cerrar sesion</a>
-         
+          <a class="dropdown-item" href="../seguridad/loginVista.php">cerrar sesion</a>
+          
+
         </div>
       </li>
     </ul>
   </div>
+
+
 </nav>
