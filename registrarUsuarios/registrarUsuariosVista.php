@@ -1,4 +1,5 @@
 <?php include_once "../componentes/menuPrincipal.php"; ?>
+<!-- <script src="registrarUsuarios/validacion.js"></script>  -->
 
 <div class="container mt-5">
   <div class="col-md-5 offset-md-3">
@@ -6,7 +7,7 @@
       <div class="card-header">Registro de usuarios</div>
       <div class="card-body">
         <h5 class="card-title">Datos de usuarios</h5>
-        <form action="registrarUsuariosControlador.php" method="post">
+         <form action="registrarUsuariosControlador.php" method="post">
 
 
           <div class="form-group">
@@ -39,8 +40,14 @@
 
             <div class="form-row">
               <div class="form-group col-md-6">
-                <label for="inputPassword3">password</label>
-                <input type="password" class="form-control" id="inputPassword3" required="" name="password">
+                <label for="inputPassword">password</label>
+                <input type="password" class="form-control" id="inputPassword" required="" name="password">
+              </div>
+
+              <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputPassword2">verifica password</label>
+                <input type="password" class="form-control" id="inputPassword2" required="" name="password2">
               </div>
 
 
@@ -65,10 +72,24 @@
 
                   </select>
                 </div>
+            
                 <button type="submit" class="btn btn-primary">registrar</button>
-        </form>
+          </form>
       </div>
     </div>
   </div>
 
 </div>
+<script>
+function validarPassword(pass){
+    mostrarValidacion('#password',pass.length>=4);
+}
+function validarPasswordIguales(password,password2){
+    mostrarValidacion('#password2',password.length>=4 && password==password2);
+};
+if (password !== password2) {
+  alert("Las passwords deben de coincidir"); 
+} else {
+  alert("Todo esta correcto");
+};
+</script> 
