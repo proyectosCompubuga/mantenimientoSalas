@@ -12,9 +12,9 @@ $cargo=$_POST['cargo'];
 
     $utilModelo = new utilModelo();
 	//$campos es el nombre de los campos tal cual aparece en la base de datos
-    $campos = array("id_usuario", "nombre","password", "email", "tipo_usuario");
+    $campos = array("id_usuario", "nombre", "telefono","password", "email", "tipo_usuario");
     //$valores son los valores a almacenar
-    $valores = array("$identificacion","$nombres","$password","$Email","$cargo");
+    $valores = array("$identificacion","$nombres","$tel","$password","$Email","$cargo");
     //la funcion insertar recive el nombre de la tabla y los dos arrays de campos y valores
     $nombreDeTabla = "usuarios";
     $utilModelo -> insertar($nombreDeTabla,$campos, $valores);

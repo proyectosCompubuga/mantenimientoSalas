@@ -8,12 +8,12 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-    <title>compubuga</title>
+    <title>COMPUBUGA</title>
   </head>
   <body>  
 
  <nav class="navbar navbar-expand-lg navbar-dark bg-success">
-  <a class="navbar-brand" href="#">compubuga</a>
+  <a class="navbar-brand" href="#">COMPUBUGA</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -26,29 +26,30 @@
         <a class="nav-link" href="#">Areas</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">datos</a>
+        <a class="nav-link" href="#">Datos</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">reportar</a>
+        <a class="nav-link" href="#">Reportar</a>
       </li>
 
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="../registrarUsuarios/registrarUsuariosVista.php" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          registrar
+          Usuarios
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="../crudUsuarios/usuarios.php">ver usuarios</a>
+          <a class="dropdown-item p-2 mb-2 bg-secondary text-white" href="../crudUsuarios/usuarios.php">Ver usuarios</a>
+          <a class="dropdown-item " href="../registrarUsuarios/registrarUsuariosVista.php">Registrar</a>
           
         </div>
       </li>
 
         <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          perfil
+          Perfil
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">usuario</a>
-          <a class="dropdown-item" href="../seguridad/loginVista.php">cerrar sesion</a>
+          <a class="dropdown-item" href="#">Usuario</a>
+          <a class="dropdown-item" href="#">Cerrar sesion</a>
           
 
         </div>
@@ -58,3 +59,5 @@
 
 
 </nav>
+
+

@@ -22,7 +22,7 @@
               <label>Tipo de usuario</label>
               <input type="text" id="usuariou" name="usuariou" class="form-control form-control-sm">
               <br>
-               <input type="submit" value="Actualizar" class="btn btn-warning">
+               <input type="submit" value="Actualizar" class="btn btn-info">
           </form>
       </div>
       <div class="modal-footer">

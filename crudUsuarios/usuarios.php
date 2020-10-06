@@ -7,7 +7,7 @@ $conexion=mysqli_connect('mysql5016.site4now.net','a68046_proyec','cb1006jsal','
 ?>
 
 
-
+<br>
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,13 +24,12 @@ $conexion=mysqli_connect('mysql5016.site4now.net','a68046_proyec','cb1006jsal','
 
 	<div class="container">
 		<div class="row">
-			<h2>registro de usuarios</h2>
+			<h2>REGISTRO DE USUARIOS</h2>
 			<div class="col-sm-12">
 				<div class="card text-left">
-					<div class="card-header">
+					<div class="card-header ">
 						<ul class="nav nav-tabs card-header-tabs">
 							<li class="nav-item">
-								<a class="nav-link active" href="#">usuarios</a>
 							</li>
 						</ul>
 					</div>
@@ -45,13 +44,14 @@ $conexion=mysqli_connect('mysql5016.site4now.net','a68046_proyec','cb1006jsal','
 						<hr>
 						<div class="row">
 							<div class="col-sm-12">
-								<table class="table table-dark">
+								<table class="table table-">
 									<thead>
 										<tr class="font-weight-bold">
 										
 										
 											<td>id</td>
 											<td>nombre</td>
+											<td>Teléfono </td>
 											<td>contraseña</td>
 											<td>email</td>
 											<td>tipo de usuario</td>
@@ -73,12 +73,13 @@ $conexion=mysqli_connect('mysql5016.site4now.net','a68046_proyec','cb1006jsal','
 									     <tr>
 			                                 <td><?php echo $mostrar['id_usuario'] ?></td>
 			                                 <td><?php echo $mostrar['nombre'] ?></td>
+											 <td><?php echo $mostrar['telefono'] ?></td>
 			                                 <td><?php echo $mostrar['password'] ?></td>
 			                                 <td><?php echo $mostrar['email'] ?></td>
 			                                 <td><?php echo $mostrar['tipo_usuario'] ?></td>
 											 <td>
-												<span class="btn btn-warning btn-sm" onclick="obtenerDatos()" data-toggle="modal" data-target="#actualizarModal">
-													<i class="fas fa-edit"></i>
+												<span class="btn btn-info btn-sm  " onclick="obtenerDatos()" data-toggle="modal" data-target="#actualizarModal">
+													<i class="fas fa-edit info"></i>
 												</span>
 												
 											</td>

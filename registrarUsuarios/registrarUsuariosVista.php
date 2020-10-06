@@ -1,16 +1,17 @@
 <?php include_once "../componentes/menuPrincipal.php"; ?>
 
+
+
 <div class="container mt-5">
   <div class="col-md-5 offset-md-3">
     <div class="card bg-light mb-3">
-      <div class="card-header">Registro de usuarios</div>
+      <div class="card-header ">REGISTRO DE USUARIOS</div>
       <div class="card-body">
-        <h5 class="card-title">Datos de usuarios</h5>
         <form action="registrarUsuariosControlador.php" method="post">
 
 
-          <div class="form-group">
-            <label for="inputidentificacion1">Identificacion</label>
+          <div class="form-group ">
+            <label for="inputidentificacion1">Identificación </label>
             <input type="text" class="form-control" id="identificacion" name="identificacion" placeholder="identificacion" required="" pattern="[0-9]+">
           </div>
 
@@ -32,7 +33,7 @@
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="inputCity">Telefono</label>
-              <input type="text" class="form-control" id="telefono" name="telefono" pattern="[0-9]+">
+              <input type="text" class="form-control" id="telefono" name="telefono" pattern="[0-9]+" required="">
             </div>
 
 
