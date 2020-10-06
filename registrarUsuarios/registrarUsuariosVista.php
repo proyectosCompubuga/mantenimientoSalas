@@ -46,8 +46,8 @@
 
               <div class="form-row">
               <div class="form-group col-md-6">
-                <label for="inputPassword2">verifica password</label>
-                <input type="password" class="form-control" id="inputPassword2" required="" name="password2">
+                <label for="inputPass2">verifica password</label>
+                <input type="password" class="form-control" id="inputPass2" required="" name="pass2">
               </div>
 
 
@@ -81,15 +81,14 @@
 
 </div>
 <script>
-function validarPassword(pass){
-    mostrarValidacion('#password',pass.length>=4);
-}
-function validarPasswordIguales(password,password2){
-    mostrarValidacion('#password2',password.length>=4 && password==password2);
+var password = document.getElementById("inputPassword").value;
+var pass2 = document.getElementById("inputPass2").value;
+if(password !== pass2) {
+  alert ("Todo esta correcto")
+   true; 
+}else {
+  alert ("Las passwords deben de coincidir")
+  false;
 };
-if (password !== password2) {
-  alert("Las passwords deben de coincidir"); 
-} else {
-  alert("Todo esta correcto");
-};
-</script> 
+
+</script>

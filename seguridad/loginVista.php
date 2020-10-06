@@ -32,9 +32,9 @@ if (isset($_SESSION['usuario'])) {
 
                 <form action="loguinControlador.php" method="post" role="form">
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Email address</label>
-                        <input type="text" class="form-control" id="username" name="username" aria-describedby="emailHelp" placeholder="Enter email">
-                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        <label for="exampleInputEmail1">Numero de identificación</label>
+                        <input type="text" class="form-control" id="username" name="username" aria-describedby="emailHelp" placeholder="Identificación">
+                        <small id="emailHelp" class="form-text text-muted"></small>
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Password</label>
