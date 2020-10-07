@@ -9,7 +9,7 @@
         <a class="nav-link" href="#">inicio <!-- <span class="sr-only">(current)</span>--></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">datos </a>
+        <a class="nav-link" href="../crudClientes/crudClientes.php">datos </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">reportes </a>

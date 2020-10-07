@@ -26,7 +26,7 @@
         <a class="nav-link" href="#">Areas</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Datos</a>
+        <a class="nav-link" href="../crudClientes/clientesVista.php">datos</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Reportar</a>

@@ -6,6 +6,7 @@ $identificacion=$_POST['identificacion'];
 $nombres=$_POST['nombre'] ." ". $_POST['apellido']; 
 $tel=$_POST['telefono'];
 $password=$_POST['password'];
+$pass2=$_POST['pass2'];
 $Email=$_POST['email'];
 $cargo=$_POST['cargo'];
 
