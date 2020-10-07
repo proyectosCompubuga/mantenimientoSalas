@@ -74,17 +74,6 @@ class utilModelo
     return $query;
   }
 
-
-  function actualizarCondiciones($tabla,$campos,$condiciones){
-    global $link;
-
-    $consulta="UPDATE $tabla SET $campos WHERE $condiciones";
-    $query = mysqli_query($link, $consulta);
-    echo "$consulta";
-    return $query;
-  }
-
-
   
   function eliminarRegistros($tabla,$condiciones){
     global $link;
