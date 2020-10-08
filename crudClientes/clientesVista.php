@@ -35,30 +35,46 @@
         include "../componentes/menuPrincipal.php";
     ?>
 
-
-          <!-- Page Heading -->
-          <h1 class="h3 mb-4 text-gray-800">Clientes</h1>
+<br>
+          
           <!-- Earnings (Monthly) Card Example -->
           <div class="col-xl-12 col-md-12 mb-4">
             <div class="card border-left-primary shadow h-100 py-2">
               <div class="card-body">
                 <div class="row no-gutters align-items-center">
-                  <div class="text-xl font-weight-bold text-primary text-uppercase mb-1">ingresar clientes <i class="fas fa-user"></i></div>
+                  <div class="text-xl font-weight-bold text-primary text-uppercase mb-1">Registrar usuarios <i class="fas fa-user"></i></div>
                       <!--aqui el form-->
                       <form class="user" action="clientesControlador.php" method="post">
                         <div class="row">
                           <div class="form-group col-sm-2">
-                            <input type="number" required class="form-control" id="cedulaCliente" name="cedula" placeholder="Identificacion">
+                            <input type="number" required class="form-control" id="cedulaCliente" name="identificacion" placeholder="Identificacion">
                             </div>
                           <div class="form-group col-md-3">
                             <input type="text" required class="form-control" id="nombresCliente" name="nombre" placeholder="Nombres">
                           </div>
                           <div class="form-group col-md-3">
-                            <input type="text" required class="form-control" id="direccionCliente" name="direccion" placeholder="Direccion">
+                            <input type="text" required class="form-control" id="telefono" name="telefono" pattern="[0-9]+" placeholder="telefono">
                           </div>
-                          <div class="form-group col-md-2">
-                            <input type="number" required class="form-control" id="telefonoCliente" name="telefono" placeholder="Telefono">
+                          <div class="form-group col-md-3">
+                            <input type="text" required class="form-control" id="inputPassword" name="password" placeholder="password">
                           </div>
+                          <div class="form-group col-md-3">
+                            <input type="email" required class="form-control" id="inputEmail13" required="" name="email" placeholder="Email">
+                          </div>
+
+              
+                   
+                   
+                   <div class="form-group col-md-3">
+                   <select id="cargo" name="cargo" class="form-control">
+                   <option selected>tipo de usuario</option>
+                   <option value="0">administrativo</option>
+                   <option value="1">monitor</option>
+                    <option value="2">tecnico reparador</option>
+
+                  </select>
+                </div>
+                         
                           <div class="form-group col-md-2">
                                           <button type="submit" id="crearCliente" name="guardar" value="Crear"class="btn btn-primary btn-icon-split">
                                             <span class="icon text-white-50">
@@ -85,17 +101,21 @@
                     <tr>
                       <th>Identificacion</th>
                       <th>Nombres</th>
-                      <th>Direccion</th>
-                      <th>Telefono</th>
+                      <th>telefono</th>
+                      <th>password</th>
+                      <th>Email</th>
+                      <th>Tipo de usuario</th>
                       <th class="td-actions">EDITAR/ELIMINAR</th>
                     </tr>
                   </thead>
                   <tfoot>
                     <tr>
-                      <th>Identificacion</th>
+                    <th>Identificacion</th>
                       <th>Nombres</th>
-                      <th>Direccion</th>
-                      <th>Telefono</th>
+                      <th>telefono</th>
+                      <th>password</th>
+                      <th>Email</th>
+                      <th>Tipo de usuario</th>
                       <th class="td-actions">EDITAR/ELIMINAR</th>
                     </tr>
                   </tfoot>
@@ -110,12 +130,17 @@
         			        					   $fila[1]."||".
         			        					   $fila[2]."||".
                                    $fila[3]."||";
+                                   $fila[4]."||";
+                                   $fila[5]."||";
+                                   
                                      echo"<tr>
 
                                      <td>$fila[0]</td>
                                        <td>$fila[1]</td>
                                        <td>$fila[2]</td>
                                        <td>$fila[3]</td>
+                                       <td>$fila[4]</td>
+                                       <td>$fila[5]</td>
                                        <td class=\"td-actions\"><span data-toggle=\"tooltip\" data-placement=\"top\" title=\"Editar\" > <a data-toggle=\"modal\" href=\"#modalEditar\" onclick=\"agregarForm('$datos');\" class=\"btn btn-small btn-primary\"> <i class=\"btn-icon-only fas fa-pen\"> </i></a></span><span data-toggle=\"tooltip\" data-placement=\"top\" title=\"Eliminar\" > <a href=\"#modalAbonar\"  onclick=\"agregarForm('$datos');\" data-toggle=\"modal\" class=\"btn btn-danger btn-small\"><i class=\"btn-icon-only fas fa-trash\"> </i></a></span></td>
 
                                      </tr>";

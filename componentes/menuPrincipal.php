@@ -26,7 +26,7 @@
         <a class="nav-link" href="#">Areas</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="../crudClientes/clientesVista.php">datos</a>
+        <a class="nav-link" href="#">datos</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Reportar</a>
@@ -37,7 +37,7 @@
           Usuarios
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item p-2 mb-2 bg-secondary text-white" href="../crudUsuarios/usuarios.php">Ver usuarios</a>
+          <a class="dropdown-item p-2 mb-2 bg-secondary text-white" href="../crudClientes/clientesVista.php"">Ver usuarios</a>
           <a class="dropdown-item " href="../registrarUsuarios/registrarUsuariosVista.php">Registrar</a>
           
         </div>
