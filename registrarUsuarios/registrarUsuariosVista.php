@@ -46,12 +46,7 @@
                 <input type="password" class="form-control" id="inputPassword" required="" name="password">
               </div>
 
-              <div class="form-row">
-              <div class="form-group col-md-6">
-                <label for="inputPass2">verifica password</label>
-                <input type="password" class="form-control" id="inputPass2" required="" name="pass2">
-              </div>
-
+             
 
 
 
@@ -82,21 +77,6 @@
   </div>
 
 </div>
-<<<<<<< HEAD
 
 
 <?php include_once "../componentes/pie.php"; ?>
-=======
-<script>
-var password = document.getElementById("inputPassword").value;
-var pass2 = document.getElementById("inputPass2").value;
-if(password !== pass2) {
-  alert ("Todo esta correcto")
-   true; 
-}else {
-  alert ("Las passwords deben de coincidir")
-  false;
-};
-
-</script>
->>>>>>> b2c8fb06dde1325af042761b71a255eb8ba42728
