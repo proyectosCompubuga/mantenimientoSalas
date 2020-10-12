@@ -74,6 +74,14 @@ class utilModelo
     return $query;
   }
 
+  function mostrarColumnasTabla($tabla){
+    global $link;
+    $consulta="show columns FROM $tabla";
+    $query = mysqli_query($link, $consulta);
+    echo "$consulta";
+    return $query;
+  }
+
   
   function eliminarRegistros($tabla,$condiciones){
     global $link;

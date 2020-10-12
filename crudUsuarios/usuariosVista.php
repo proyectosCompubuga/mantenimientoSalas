@@ -37,46 +37,13 @@
 
 
           <!-- Page Heading -->
-          <h1 class="h3 mb-4 text-gray-800">Clientes</h1>
+          <h1 class="h3 mb-4 text-gray-800">Usuarios</h1>
           <!-- Earnings (Monthly) Card Example -->
-          <div class="col-xl-12 col-md-12 mb-4">
-            <div class="card border-left-primary shadow h-100 py-2">
-              <div class="card-body">
-                <div class="row no-gutters align-items-center">
-                  <div class="text-xl font-weight-bold text-primary text-uppercase mb-1">ingresar clientes <i class="fas fa-user"></i></div>
-                      <!--aqui el form-->
-                      <form class="user" action="clientesControlador.php" method="post">
-                        <div class="row">
-                          <div class="form-group col-sm-2">
-                            <input type="number" required class="form-control" id="cedulaCliente" name="cedula" placeholder="Identificacion">
-                            </div>
-                          <div class="form-group col-md-3">
-                            <input type="text" required class="form-control" id="nombresCliente" name="nombre" placeholder="Nombres">
-                          </div>
-                          <div class="form-group col-md-3">
-                            <input type="text" required class="form-control" id="direccionCliente" name="direccion" placeholder="Direccion">
-                          </div>
-                          <div class="form-group col-md-2">
-                            <input type="number" required class="form-control" id="telefonoCliente" name="telefono" placeholder="Telefono">
-                          </div>
-                          <div class="form-group col-md-2">
-                                          <button type="submit" id="crearCliente" name="guardar" value="Crear"class="btn btn-primary btn-icon-split">
-                                            <span class="icon text-white-50">
-                                              <i class="fas fa-user"></i>
-                                            </span>
-                                            <span class="text">Crear</span>
-                                          </button>
-                          </div>
-                        </div>
-                      </form>
-                </div>
-              </div>
-            </div>
-          </div>
+         
           <!-- DataTales Example -->
           <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Buscar Cliente</h6>
+              <h6 class="m-0 font-weight-bold text-primary">Buscar Usuarios</h6>
             </div>
             <div class="card-body">
               <div class="table-responsive">

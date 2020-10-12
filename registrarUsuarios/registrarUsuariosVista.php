@@ -82,21 +82,6 @@
   </div>
 
 </div>
-<<<<<<< HEAD
 
 
 <?php include_once "../componentes/pie.php"; ?>
-=======
-<script>
-var password = document.getElementById("inputPassword").value;
-var pass2 = document.getElementById("inputPass2").value;
-if(password !== pass2) {
-  alert ("Todo esta correcto")
-   true; 
-}else {
-  alert ("Las passwords deben de coincidir")
-  false;
-};
-
-</script>
->>>>>>> b2c8fb06dde1325af042761b71a255eb8ba42728
