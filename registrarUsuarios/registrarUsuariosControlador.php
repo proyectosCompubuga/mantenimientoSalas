@@ -21,6 +21,6 @@ $cargo=$_POST['cargo'];
     $utilModelo -> insertar($nombreDeTabla,$campos, $valores);
 
 $_SESSION['mensajeOk']="ok";
-//header('Location: ../crudUsuarios/Usuarios.php');
+header('Location: ../crudUsuarios/Usuarios.php');
 exit();
 ?>
