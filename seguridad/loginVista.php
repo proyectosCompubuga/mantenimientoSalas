@@ -14,39 +14,36 @@ if (isset($_SESSION['usuario'])) {
 
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <!-- <LINK REL=StyleSheet HREF="css/pruebaLogin.css" TYPE="text/css" MEDIA=screen>
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <link href="../css/estiloLogin.css" rel="stylesheet" id="estiloLogin">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="../js/login.js"></script>   -->
-    <title>INICIO</title>
+   
+    <title>Compubuga.com</title>
 </head>
 
-<body>
-    <div class="container offset-md-8 mt-4 pt-4">
-        <div class="card border-success mb-3" style="max-width: 22rem;">
-            <div class="card-header">Bienvenido al S.S.R.S.</div>
-            <div class="card-body text-success">
-                <h5 class="card-heading pb-2">Inicia Sesión</h5>
+<body  style="background-image: url('https://cdn.pixabay.com/photo/2017/08/10/10/51/atomic-bomb-2621291_960_720.jpg');">
+     <div class="container-fluid">
+        <div class="container offset-md-8 mt-4 pt-4">
+            <div class="card border-success mb-3" style="max-width: 22rem;">
+                <div class="card-header">Bienvenido al S.S.R.S.</div>
+                <div class="card-body text-success">
+                    <h5 class="card-heading pb-2">Inicia Sesión</h5>
 
-                <form action="loguinControlador.php" method="post" role="form">
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Numero de identificación</label>
-                        <input type="text" class="form-control" id="username" name="username" aria-describedby="emailHelp" placeholder="Identificación">
-                        <small id="emailHelp" class="form-text text-muted"></small>
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Password</label>
-                        <input type="password" class="form-control" id="ipassword" name="ipassword" placeholder="Password">
-                    </div>
-                    <div class="form-check mb-3">
-                        <a href="">Olvidaste contraseña?</a>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Ingresar</button>
-                </form>
+                    <form action="loguinControlador.php" method="post" role="form">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Numero de identificación</label>
+                            <input type="text" class="form-control" id="username" name="username" aria-describedby="emailHelp" placeholder="Identificación">
+                            <small id="emailHelp" class="form-text text-muted"></small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="ipassword" name="ipassword" placeholder="Password">
+                        </div>
+                        <div class="form-check mb-3">
+                            <a href="">Olvidaste contraseña?</a>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Ingresar</button>
+                    </form>
+                </div>
             </div>
-        </div>
+        </div>        
     </div>
     <script type="text/javascript">
         function validarPassword() {
