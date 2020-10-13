@@ -9,6 +9,7 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/estilos.css">
 
   <title>COMPUBUGA</title>
 </head>
@@ -54,7 +55,9 @@
             <div class="nav-link  rounded-circle border border-white" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <i class="fa fa-user mx-1"></i>
             </div>
-            <div class="dropdown-menu " aria-labelledby="navbarDropdownMenuLink">
+            <div class="dropdown-menu panelPerfil" aria-labelledby="navbarDropdownMenuLink">
+              <div class="rounded-circle border border-black " style="width: 25.em; height: 100px;"><i class="fa fa-users mx-1"></i></div>
+              <span><?php echo $_SESSION['usuario'][2]?></span>
               <a class="dropdown-item" href="#">Usuario</a>
               <a class="dropdown-item" href="../seguridad/cerrarSesion.php">Cerrar sesion</a>
             </div>

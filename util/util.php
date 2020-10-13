@@ -21,13 +21,13 @@
                             header('Location: ../admin/adminVista.php');
                             exit();
                             break;
-                        case 1://usuario docente
+                        case 1://usuario tecnico
 
                             header('Location: ../docente/docenteVista.php');
                             exit();
                             break;
-                        case 2://usuario alumno
-                            header('Location: ../alumno/alumnoVista.php');
+                        case 2://usuario monitor
+                            header('Location: ../reportarIncidencias/reportarIncidencias.php');
                             exit();
                             break;
 

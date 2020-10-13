@@ -16,3 +16,14 @@ input[type=number] {
 #osdo2{
   border:solid black 1px;
 }
+
+.panelPerfil{
+  width: 300px;
+  height: 400px;
+  padding-top: 30px;
+
+}
+.panelPerfil > div{
+  width: auto;
+  height: auto;
+}
