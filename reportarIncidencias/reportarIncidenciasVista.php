@@ -21,7 +21,7 @@ $util->validarRuta(0);
           <div class="row">
             <div class="form-group col-md-6">
               <label for="inputState">Sala</label>
-              <select id="sala" name="sala" required class="form-control" onchange="selectEquipos();">
+              <select id="sala" name="sala" required class="form-control">
                 <option></option>
                 <?php
                 $tabla = "sala";

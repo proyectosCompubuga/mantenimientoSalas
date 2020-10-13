@@ -12,7 +12,7 @@ $clave = filter_input(INPUT_POST, 'sala');
 
     $cadena="
     <label for='inputState'>Equipo</label>
-			<select class='form-control' id='lista2' name='lista2'>";
+			<select class='form-control' id='equipos' name='equipos'>";
 
 	while ($ver=mysqli_fetch_row($result)) {
 		$cadena=$cadena.'<option value='.$ver[0].'>'.utf8_encode($ver[2]).'</option>';
