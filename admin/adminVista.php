@@ -6,6 +6,8 @@
     $util->validarRuta(0);
 
     include_once "../componentes/menuPrincipal.php";
+    include_once "../componentes/pie.php";
+
 ?>
 
   

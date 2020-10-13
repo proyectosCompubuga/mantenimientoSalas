@@ -16,21 +16,22 @@
 <body>
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-success">
-    <a class="navbar-brand" href="#">COMPUBUGA</a>
+    <a class="navbar-brand" href="#">S.S.R.S</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="#">inicio
-            <!-- <span class="sr-only">(current)</span>--></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Areas</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../crudUsuarios/clientesUsuarios.php">datos</a>
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="../registrarUsuarios/registrarUsuariosVista.php" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Salas
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="../crudUsuarios/usuariosVista.php">Registrar</a>
+            <a class="dropdown-item " href="../registrarUsuarios/registrarUsuariosVista.php">Ver Salas</a>
+
+          </div>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="../reportarIncidencias/reportarIncidenciasVista.php">Reportar</a>
