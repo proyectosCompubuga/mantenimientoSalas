@@ -52,8 +52,10 @@
                     <tr>
                       <th>Identificacion</th>
                       <th>Nombres</th>
-                      <th>Direccion</th>
-                      <th>Telefono</th>
+                      <th>telefono</th>
+                      <th>contraseña</th>
+                      <th>Email</th>
+                      <th>Tipo de usuario</th>
                       <th class="td-actions">EDITAR/ELIMINAR</th>
                     </tr>
                   </thead>
@@ -61,8 +63,10 @@
                     <tr>
                       <th>Identificacion</th>
                       <th>Nombres</th>
-                      <th>Direccion</th>
-                      <th>Telefono</th>
+                      <th>telefono</th>
+                      <th>contraseña</th>
+                      <th>Email</th>
+                      <th>Tipo de usuario</th>
                       <th class="td-actions">EDITAR/ELIMINAR</th>
                     </tr>
                   </tfoot>
@@ -75,14 +79,18 @@
                             if ($fila != NULL) {
                                   $datos=$fila[0]."||".
         			        					   $fila[1]."||".
-        			        					   $fila[2]."||".
-                                   $fila[3]."||";
+                                   $fila[2]."||".
+                                   $fila[3]."||".
+                                   $fila[4]."||".
+                                   $fila[5]."||";
                                      echo"<tr>
 
                                      <td>$fila[0]</td>
                                        <td>$fila[1]</td>
                                        <td>$fila[2]</td>
                                        <td>$fila[3]</td>
+                                       <td>$fila[4]</td>
+                                       <td>$fila[5]</td>
                                        <td class=\"td-actions\"><span data-toggle=\"tooltip\" data-placement=\"top\" title=\"Editar\" > <a data-toggle=\"modal\" href=\"#modalEditar\" onclick=\"agregarForm('$datos');\" class=\"btn btn-small btn-primary\"> <i class=\"btn-icon-only fas fa-pen\"> </i></a></span><span data-toggle=\"tooltip\" data-placement=\"top\" title=\"Eliminar\" > <a href=\"#modalAbonar\"  onclick=\"agregarForm('$datos');\" data-toggle=\"modal\" class=\"btn btn-danger btn-small\"><i class=\"btn-icon-only fas fa-trash\"> </i></a></span></td>
 
                                      </tr>";

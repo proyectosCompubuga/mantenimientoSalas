@@ -9,7 +9,7 @@
       <div class="card-header ">REGISTRO DE USUARIOS</div>
       <div class="card-body">
         <h5 class="card-title">Datos de usuarios</h5>
-         <form action="registrarUsuariosControlador.php" method="post">
+         <form action="../crudUsuarios/usuariosControlador.php" method="post">
 
 
           <div class="form-group ">
@@ -46,12 +46,6 @@
                 <input type="password" class="form-control" id="inputPassword" required="" name="password">
               </div>
 
-              <div class="form-row">
-              <div class="form-group col-md-6">
-                <label for="inputPass2">verifica password</label>
-                <input type="password" class="form-control" id="inputPass2" required="" name="pass2">
-              </div>
-
 
 
 
@@ -75,7 +69,7 @@
                   </select>
                 </div>
             
-                <button type="submit" class="btn btn-primary">registrar</button>
+                <button  name="guardar" type="submit" class="btn btn-primary">registrar</button>
           </form>
       </div>
     </div>

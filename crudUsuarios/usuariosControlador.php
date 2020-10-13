@@ -6,41 +6,43 @@ include '../util/util.php';
 $util = new util();
 $utilModelo = new utilModelo();
 //valores del seaprado
-$codigo = filter_input(INPUT_POST,'cedula');
-$nombre = filter_input(INPUT_POST,'nombre');
-$direccion = filter_input(INPUT_POST,'direccion');
-$telefono = filter_input(INPUT_POST,'telefono');
+$identificacion= filter_input(INPUT_POST,'identificacion');
+$nombres= filter_input(INPUT_POST,'nombre') ." ". $_POST['apellido']; 
+$tel= filter_input(INPUT_POST,'telefono');
+$password= filter_input(INPUT_POST,'password');
+$Email= filter_input(INPUT_POST,'email');
+$cargo= filter_input(INPUT_POST,'cargo');
 
 
 //guardar
 if(isset($_POST['guardar'])){
           	//$campos es el nombre de los campos tal cual aparece en la base de datos
-          $campos = array("identificacion", "nombre", "direccion","telefono","email");
+            $campos = array("id_usuario", "nombre", "telefono","password", "email", "tipo_usuario");
           //$valores son los valores a almacenar
-          $valores = array("$codigo","$nombre","$direccion","$telefono","N/A");
+          $valores = array("$identificacion","$nombres","$tel","$password","$Email","$cargo");
           //la funcion insertar recive el nombre de la tabla y los dos arrays de campos y valores
-          $nombreDeTabla = "clientes";
+          $nombreDeTabla = "usuarios";
           $utilModelo -> insertar($nombreDeTabla,$campos, $valores);
-$_SESSION['mensajeOk']="Accion realizada";header('Location: ../crudClientes/clientesVista.php');
+$_SESSION['mensajeOk']="Accion realizada";header('Location: ../crudUsuarios/usuariosVista.php');
 //modificar
 }else if(isset($_POST['modificar'])){
 	echo "abonar";
 
-  $campos = array("nombre", "direccion","telefono","email");
+  $campos = array("id_usuario", "nombre", "telefono","password", "email", "tipo_usuario");
   //$valores son los valores a almacenar
-  $valores = array("$nombre","$direccion","$telefono","N/A");
+  $valores = array("$identificacion","$nombres","$tel","$password","$Email","$cargo");
   //la funcion insertar recive el nombre de la tabla y los dos arrays de campos y valores
-  $nombreDeTabla = "clientes";
-$utilModelo -> modificar($nombreDeTabla,$campos,$valores,'identificacion',$codigo);
+  $nombreDeTabla = "usuarios";
+$utilModelo -> modificar($nombreDeTabla,$campos,$valores,'identificacion',$identificacion);
 
-$_SESSION['mensajeOk']="Accion realizada";header('Location: ../crudClientes/clientesVista.php');
+$_SESSION['mensajeOk']="Accion realizada";header('Location: ../crudUsuarios/usuariosVista.php');
 }
 else{
 
 
-    $nombreDeTabla = "clientes";
-  $utilModelo -> eliminarRegistros($nombreDeTabla,"identificacion=$codigo");
-  $_SESSION['mensajeOk']="Accion realizada";header('Location: ../crudClientes/clientesVista.php');
+    $nombreDeTabla = "usuarios";
+  $utilModelo -> eliminarRegistros($nombreDeTabla,"identificacion=$identificacion");
+  $_SESSION['mensajeOk']="Accion realizada";header('Location: ../crudUsuarios/usuariosVista.php');
 
 }
 	exit();
