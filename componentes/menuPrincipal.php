@@ -28,8 +28,8 @@
             Salas
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="../crudUsuarios/usuariosVista.php">Registrar</a>
-            <a class="dropdown-item " href="../registrarUsuarios/registrarUsuariosVista.php">Ver Salas</a>
+            <a class="dropdown-item" href="../reportarIncidencias/reportarIncidenciasVista.php">Registrar</a>
+            <a class="dropdown-item " href="../crudReportes/reportesVista.php">Ver Salas</a>
 
           </div>
         </li>

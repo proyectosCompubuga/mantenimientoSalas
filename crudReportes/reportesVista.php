@@ -5,7 +5,6 @@
     $util = new util();
     $util->validarRuta(0);
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,7 +16,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Calzado Karol Bucaramanga</title>
+  <title>datos</title>
 
   <!-- Custom fonts for this template-->
   <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -38,13 +37,13 @@
 
 
           <!-- Page Heading -->
-          <h1 class="h3 mb-4 text-gray-800">Usuarios</h1>
+          <h1 class="h3 mb-4 text-gray-800">Reportes</h1>
           <!-- Earnings (Monthly) Card Example -->
          
           <!-- DataTales Example -->
           <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Buscar Usuarios</h6>
+              <h6 class="m-0 font-weight-bold text-primary">Buscar reporte</h6>
             </div>
             <div class="card-body">
               <div class="table-responsive">
@@ -52,29 +51,31 @@
                   <thead>
                     <tr>
                       <th>Identificacion</th>
-                      <th>Nombres</th>
-                      <th>telefono</th>
-                      <th>contraseña</th>
-                      <th>Email</th>
-                      <th>Tipo de usuario</th>
+                      <th>id usuario</th>
+                      <th>id sala</th>
+                      <th>id reparacion</th>
+                      <th>fecha reporte</th>
+                      <th>observacion</th>
+                      <th>estado</th>
                       <th class="td-actions">EDITAR/ELIMINAR</th>
                     </tr>
                   </thead>
                   <tfoot>
                     <tr>
-                      <th>Identificacion</th>
-                      <th>Nombres</th>
-                      <th>telefono</th>
-                      <th>contraseña</th>
-                      <th>Email</th>
-                      <th>Tipo de usuario</th>
+                    <th>Identificacion</th>
+                      <th>id usuario</th>
+                      <th>id sala</th>
+                      <th>id reparacion</th>
+                      <th>fecha reporte</th>
+                      <th>observacion</th>
+                      <th>estado</th>
                       <th class="td-actions">EDITAR/ELIMINAR</th>
                     </tr>
                   </tfoot>
                   <tbody>
                     <?php
                     $saldoCero=0;
-                      $tabla = "usuarios";
+                      $tabla = "reportes";
                       $result = $utilModelo2->consultarVariasTablas("*",$tabla,"1");
                         while ($fila = mysqli_fetch_array($result)) {
                             if ($fila != NULL) {
@@ -84,6 +85,7 @@
                                    $fila[3]."||".
                                    $fila[4]."||".
                                    $fila[5]."||";
+                                   $fila[6]."||";
                                      echo"<tr>
 
                                      <td>$fila[0]</td>
@@ -92,6 +94,7 @@
                                        <td>$fila[3]</td>
                                        <td>$fila[4]</td>
                                        <td>$fila[5]</td>
+                                       <td>$fila[6]</td>
                                        <td class=\"td-actions\"><span data-toggle=\"tooltip\" data-placement=\"top\" title=\"Editar\" > <a data-toggle=\"modal\" href=\"#modalEditar\" onclick=\"agregarForm('$datos');\" class=\"btn btn-small btn-primary\"> <i class=\"btn-icon-only fas fa-pen\"> </i></a></span><span data-toggle=\"tooltip\" data-placement=\"top\" title=\"Eliminar\" > <a href=\"#modalAbonar\"  onclick=\"agregarForm('$datos');\" data-toggle=\"modal\" class=\"btn btn-danger btn-small\"><i class=\"btn-icon-only fas fa-trash\"> </i></a></span></td>
 
                                      </tr>";
