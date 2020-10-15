@@ -52,8 +52,8 @@
             Equipos
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="../crudEquipos/equiposVista.php">Registro</a>
-           
+            <a class="dropdown-item" href="../crudEquipos/equiposVista.php">Lista de equipos</a>
+            <a class="dropdown-item" href="../registroEquipos/registrarEquiposVista.php">Registro</a>
           </div>
         </li>
       </ul>
