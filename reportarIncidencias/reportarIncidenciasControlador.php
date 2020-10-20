@@ -2,7 +2,7 @@
 @session_start();
 include '../util/utilModelo.php';
 
-$identificacion=$_POST['identificacion'];
+$identificacion=$_POST['id_usuario'];
 $nombres=$_POST['nombre'] ." ". $_POST['apellido']; 
 $tel=$_POST['telefono'];
 $password=$_POST['password'];
