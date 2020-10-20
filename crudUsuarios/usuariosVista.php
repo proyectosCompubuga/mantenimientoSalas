@@ -161,7 +161,7 @@
           </button>
         </div>
         <div class="modal-body">
-          <form action="clientesControlador.php" method="post">
+          <form action="usuariosControlador.php" method="post">
             <div class="row">
               <div class="form-group col-sm-12">
                 <input type="hidden" name="cedula"id="cedulaClienteEH" value="">
@@ -171,12 +171,34 @@
                 <input type="text" required class="form-control" id="nombresClienteE" name="nombre" placeholder="Nombres">
               </div>
               <div class="form-group col-md-12">
-                <input type="text" required class="form-control" id="direccionClienteE" name="direccion" placeholder="Direccion">
+                <input type="number" required class="form-control" id="telefonoClienteE" name="telefono" placeholder="telefono">
               </div>
               <div class="form-group col-md-12">
-                <input type="number" required class="form-control" id="telefonoClienteE" name="telefono" placeholder="Telefono">
+                <input type="text" required class="form-control" id="passwordE" name="password" placeholder="password">
+              </div>
+              <div class="form-group col-md-12">
+                <input type="email" required class="form-control" id="emailE" name="email" placeholder="Email">
+              </div>
+
+              <div class="form-group col-md-12">
+              <select id="cargoE" name="cargo" class="form-control">
+                    <option selected>tipo de usuario</option>
+                    <option value="0">administrativo</option>
+                    <option value="1">monitor</option>
+                    <option value="2">tecnico reparador</option>
+
+                  </select>
+                
               </div>
             </div>
+
+
+            
+
+
+
+            
+
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-warning" data-dismiss="modal">Cancelar</button>
@@ -199,7 +221,7 @@
           </button>
         </div>
         <div class="modal-body">
-          <form action="clientesControlador.php" method="post">
+          <form action="usuariosControlador.php" method="post">
             <div class="form-group">
               <input class="form-control" type="hidden"  name="cedula" id="cedulaEliminar">
             </div>
@@ -229,8 +251,10 @@
              $("#cedulaClienteEH").val(d[0]);
              $("#cedulaClienteE").val(d[0]);
              $("#nombresClienteE").val(d[1]);
-             $("#direccionClienteE").val(d[2]);
-             $("#telefonoClienteE").val(d[3]);
+             $("#telefonoClienteE").val(d[2]);
+             $("#passwordE").val(d[3]);
+             $("#emailE").val(d[4]);
+             $("#cargoE").val(d[5]);
              //valores eliminar
              $("#cedulaEliminar").val(d[0]);
           }

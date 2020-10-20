@@ -28,12 +28,12 @@ $_SESSION['mensajeOk']="Accion realizada";header('Location: ../crudUsuarios/usua
 }else if(isset($_POST['modificar'])){
 	echo "abonar";
 
-  $campos = array("id_usuario", "nombre", "telefono","password", "email", "tipo_usuario");
+  $campos = array("nombre", "telefono","password", "email", "tipo_usuario");
   //$valores son los valores a almacenar
-  $valores = array("$identificacion","$nombres","$tel","$password","$Email","$cargo");
+  $valores = array("$nombres","$tel","$password","$Email","$cargo");
   //la funcion insertar recive el nombre de la tabla y los dos arrays de campos y valores
   $nombreDeTabla = "usuarios";
-$utilModelo -> modificar($nombreDeTabla,$campos,$valores,'identificacion',$identificacion);
+$utilModelo -> modificar($nombreDeTabla,$campos,$valores,'id_usuario',$identificacion=79);
 
 $_SESSION['mensajeOk']="Accion realizada";header('Location: ../crudUsuarios/usuariosVista.php');
 }
