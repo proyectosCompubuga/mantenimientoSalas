@@ -179,17 +179,38 @@
           <form action="equiposControlador.php" method="post">
             <div class="row">
               <div class="form-group col-sm-12">
-                <input type="hidden" name="cedula"id="cedulaClienteEH" value="">
-                <input type="number" required disabled class="form-control" id="cedulaClienteE"  placeholder="Identificacion">
+                <input type="hidden" name="numero de quipo"id="numeroDeEquipoEH" value="">
+                <input type="text" required disabled class="form-control" id="numeroDeEquipoE"  placeholder="numeroDeEquipo">
+              </div>
+              <!-- <div class="form-group col-md-12">
+                <input type="text" required class="form-control" id="numeroDeEquipoE" name="numero de quipo" placeholder="Nombres">
+              </div> -->
+              <div class="form-group col-md-12">
+                <input type="text" required class="form-control" id="salaE" name="sala" placeholder="Sala">
               </div>
               <div class="form-group col-md-12">
-                <input type="text" required class="form-control" id="nombresClienteE" name="nombre" placeholder="Nombres">
+                <input type="text" required class="form-control" id="abreviaturaE" name="abreviatura" placeholder="Abreviatura">
               </div>
               <div class="form-group col-md-12">
-                <input type="text" required class="form-control" id="direccionClienteE" name="direccion" placeholder="Direccion">
+                <input type="text" required class="form-control" id="procesadorE" name="procesador" placeholder="Procesador">
               </div>
               <div class="form-group col-md-12">
-                <input type="number" required class="form-control" id="telefonoClienteE" name="telefono" placeholder="Telefono">
+                <input type="text" required class="form-control" id="ramE" name="ram" placeholder="Ram">
+              </div>
+              <div class="form-group col-md-12">
+                <input type="text" required class="form-control" id="discoDuroE" name="Discoduro" placeholder="Discoduro">
+              </div>
+              <div class="form-group col-md-12">
+                <input type="text" required class="form-control" id="tecladoE" name="teclado" placeholder="Teclado">
+              </div>
+              <div class="form-group col-md-12">
+                <input type="text" required class="form-control" id="mouseE" name="Mouse" placeholder="Mouse">
+              </div>
+              <div class="form-group col-md-12">
+                <input type="text" required class="form-control" id="pantallaE" name="pantalla" placeholder="Pantalla">
+              </div>
+              <div class="form-group col-md-12">
+                <input type="text" required class="form-control" id="observacionE" name="observacion" placeholder="Observacion">
               </div>
             </div>
         </div>
@@ -216,7 +237,7 @@
         <div class="modal-body">
           <form action="equiposControlador.php" method="post">
             <div class="form-group">
-              <input class="form-control" type="hidden"  name="cedula" id="cedulaEliminar">
+              <input class="form-control" type="hidden"  name="numeroDeEquipo" id="numeroDeEquipoEliminar">
             </div>
             <div class="form-group">
               <h3>Seguro desea eliminar?</h3>
@@ -241,14 +262,20 @@
           function agregarForm(datos){
             d=datos.split("||");
             //valores editar
-             $("#cedulaClienteEH").val(d[0]);
-             $("#cedulaClienteE").val(d[0]);
-             $("#nombresClienteE").val(d[1]);
-             $("#direccionClienteE").val(d[2]);
-             $("#telefonoClienteE").val(d[3]);
+             $("#numeroDeEquipoEH").val(d[0]);
+             $("#numeroDeEquipoE").val(d[0]);
+             $("#salaE").val(d[1]);
+             $("#abreviaturaE").val(d[2]);
+             $("#procesadorE").val(d[3]);
+             $("#ramE").val(d[4]);
+             $("#discoDuroE").val(d[5]);
+             $("#tecladoE").val(d[6]);
+             $("#mouseE").val(d[7]);
+             $("#pantallaE").val(d[8]);
+             $("#observacionE").val(d[9]);
              
              //valores eliminar
-             $("#cedulaEliminar").val(d[0]);
+             $("#numeroDeEquipoEliminar").val(d[0]);
           }
          $(function () {
            $('[data-toggle="tooltip"]').tooltip()

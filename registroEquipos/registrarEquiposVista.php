@@ -13,26 +13,26 @@
 
 
           <div class="form-group ">
-            <label for="inputidentificacion1">identificacion del equipo</label>
-            <input type="text" class="form-control" id="identificacion" name="identificacion" placeholder="identificacion" required="" pattern="[0-11]+">
+            <label for="id_equipo">identificacion del equipo</label>
+            <input type="text" class="form-control" id="id_equipo" name="identificacion" placeholder="identificacion" required="" >
           </div>
 
           <div class="form-group ">
-            <label for="inputidentificacion2">identificacion de la sala</label>
-            <input type="text" class="form-control" id="identificacion2" name="identificacion2" placeholder="numero de la sala" required="" pattern="[0-11]+">
+            <label for="id_sala">identificacion de la sala</label>
+            <input type="text" class="form-control" id="id_sala" name="identificacion2" placeholder="numero de la sala" required="" >
           </div>
 
           <div class="form-row">
             <div class="form-group col-md-6">
-              <label for="inputSalas">Nombre del equipo</label>
-              <input type="text" class="form-control" id="nombre1" name="nombre1" placeholder="Nombre" required="" pattern="[a-zA-Z]+">
+              <label for="nombre_pc">Nombre del equipo</label>
+              <input type="text" class="form-control" id="nombre_pc" name="nombre1" placeholder="Nombre" required="">
             </div>
           
 
 
             <div class="form-group col-md-6">
-              <label for="inputProcesador">Procesador</label>
-              <input type="text" class="form-control" id="procesador" name="procesador" placeholder="Procesador" required="" pattern="[a-zA-Z]+">
+              <label for="procesador">Procesador</label>
+              <input type="text" class="form-control" id="procesador" name="procesador" placeholder="Procesador" required="">
             </div>
           </div>
 
@@ -40,8 +40,8 @@
 
           <div class="form-row">
             <div class="form-group col-md-6">
-              <label for="inputRam">Ram</label>
-              <input type="text" class="form-control" id="inputram" name="ram" pattern="[0-9]+" required="">
+              <label for="ram">Ram</label>
+              <input type="text" class="form-control" id="ram" name="ram" required="">
             </div>
           
 
@@ -49,15 +49,15 @@
 
             
               <div class="form-group col-md-6">
-                <label for="inputDiscoDuro">disco duro</label>
-                <input type="text" class="form-control" id="inputDiscoDuro" required="" name="disco duro">
+                <label for="disco_duro">disco duro</label>
+                <input type="text" class="form-control" id="disco_duro" required="" name="disco duro">
               </div>
           </div>
 
             <div class="form-row">
               <div class="form-group col-md-6">
-                <label for="inputTeclado">teclado</label>
-                <input type="text" class="form-control" id="inputTeclado" required="" name="teclado">
+                <label for="teclado">teclado</label>
+                <input type="text" class="form-control" id="teclado" required="" name="teclado">
               </div>
             
 
@@ -65,34 +65,25 @@
 
 
                 <div class="form-group col-md-6">
-                  <label for="inputMouse">Mouse</label>
-                  <input type="text" class="form-control" id="inputMouse" required="" name="mouse">
+                  <label for="mouse">Mouse</label>
+                  <input type="text" class="form-control" id="mouse" required="" name="mouse">
                 </div>
             </div>
 
             <div class="form-row">
                 <div class="form-group col-md-6">
-                  <label for="inputPantalla">Pantalla</label>
-                  <input type="text" class="form-control" id="inputPantalla" required="" name="pantalla">
+                  <label for="pantalla">Pantalla</label>
+                  <input type="text" class="form-control" id="pantalla" required="" name="pantalla">
                 </div>
               </div>
 
               <div class="form-group">
-                  <label for="inputObservacion">observacion</label>
-                  <textarea class="form-control" id="inputObservacion" rows="3"></textarea>
+                  <label for="observacion">observacion</label>
+                  <textarea class="form-control" id="observacion" rows="3"></textarea>
                </div>
             
 
-                <!-- <div class="form-group col-md-6">
-                  <label for="inputState">tipo de usuario</label>
-                  <select id="cargo" name="cargo" class="form-control">
-                    <option selected>tipo de usuario</option>
-                    <option value="0">administrativo</option>
-                    <option value="1">monitor</option>
-                    <option value="2">tecnico reparador</option>
 
-                  </select>
-                </div> -->
             <button type="submit" class="btn btn-primary">registrar</button>
         </form>
       </div>
@@ -102,4 +93,4 @@
 </div>
 
 
-<?php include_once "../componentes/pie.php"; ?>
+

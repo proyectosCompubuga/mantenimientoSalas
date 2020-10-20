@@ -24,6 +24,6 @@ $observacion=$_POST['observacion'];
     $utilModelo -> insertar($nombreDeTabla,$campos, $valores);
 
 $_SESSION['mensajeOk']="ok";
-header('Location: ../crudequipos/equipos.php');
+header('Location: ../crudequipos/equiposVista.php');
 exit();
 ?>
