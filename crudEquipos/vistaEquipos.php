@@ -36,6 +36,13 @@
         include "../componentes/menuPrincipal.php";
     ?>
 
+    <?php
+    $busqueda = strtolower($_REQUEST['busqueda']);
+    if(empty($busqueda)){
+      header("location: vistaEquipos.php");
+    }
+    ?>
+
 
           <!-- Page Heading -->
           <h1 class="h3 mb-4 text-gray-800">Equipos</h1>
@@ -47,7 +54,7 @@
               <h6 class="m-0 font-weight-bold text-primary">Buscar Equipos</h6>
 
               <form action="vistaEquipos.php" method="get" class="form_search">
-             <input type="text" name="busqueda" id="busqueda" placegolder="Buscar">
+             <input type="text" name="busqueda" id="busqueda" placegolder="Buscar" value="<?php echo $busqueda;?>">
              <input type="submit" value="Buscar" class="btn_search">
             </form>
             </div>
