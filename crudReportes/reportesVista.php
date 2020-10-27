@@ -5,26 +5,26 @@
     $util = new util();
     $util->validarRuta(0);
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="">
-<meta name="author" content="">
 
-<title>Calzado Karol Bucaramanga</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-<!-- Custom fonts for this template-->
-<link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <title>datos</title>
 
-<!-- Custom styles for this template-->
-<link href="../css/sb-admin-2.min.css" rel="stylesheet">
-<!-- Latest compiled and minified CSS -->
+  <!-- Custom fonts for this template-->
+  <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="../css/sb-admin-2.min.css" rel="stylesheet">
+  <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
 <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 <link rel="stylesheet" href="../css/estilos.css">
@@ -37,17 +37,13 @@
 
 
           <!-- Page Heading -->
-          <h1 class="h3 mb-4 text-gray-800">Usuarios</h1>
+          <h1 class="h3 mb-4 text-gray-800">Reportes</h1>
           <!-- Earnings (Monthly) Card Example -->
          
           <!-- DataTales Example -->
-          <form action="buscar_usuario.php" method="get" class="form_search">
-            <input type="text" name="busqueda" id="busqueda" placeholder="Buscar">
-            <input type="submit" value="Buscar" class="btn-search">
-            </form>
           <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Buscar Usuarios</h6>
+              <h6 class="m-0 font-weight-bold text-primary">Buscar reporte</h6>
             </div>
             <div class="card-body">
               <div class="table-responsive">
@@ -55,29 +51,31 @@
                   <thead>
                     <tr>
                       <th>Identificacion</th>
-                      <th>Nombres</th>
-                      <th>telefono</th>
-                      <th>contraseña</th>
-                      <th>Email</th>
-                      <th>Tipo de usuario</th>
+                      <th>id usuario</th>
+                      <th>id sala</th>
+                      <th>id reparacion</th>
+                      <th>fecha reporte</th>
+                      <th>observacion</th>
+                      <th>estado</th>
                       <th class="td-actions">EDITAR/ELIMINAR</th>
                     </tr>
                   </thead>
                   <tfoot>
                     <tr>
-                      <th>Identificacion</th>
-                      <th>Nombres</th>
-                      <th>telefono</th>
-                      <th>contraseña</th>
-                      <th>Email</th>
-                      <th>Tipo de usuario</th>
+                    <th>Identificacion</th>
+                      <th>id usuario</th>
+                      <th>id sala</th>
+                      <th>id reparacion</th>
+                      <th>fecha reporte</th>
+                      <th>observacion</th>
+                      <th>estado</th>
                       <th class="td-actions">EDITAR/ELIMINAR</th>
                     </tr>
                   </tfoot>
                   <tbody>
                     <?php
                     $saldoCero=0;
-                      $tabla = "usuarios";
+                      $tabla = "reportes";
                       $result = $utilModelo2->consultarVariasTablas("*",$tabla,"1");
                         while ($fila = mysqli_fetch_array($result)) {
                             if ($fila != NULL) {
@@ -87,6 +85,7 @@
                                    $fila[3]."||".
                                    $fila[4]."||".
                                    $fila[5]."||";
+                                   $fila[6]."||";
                                      echo"<tr>
 
                                      <td>$fila[0]</td>
@@ -95,7 +94,8 @@
                                        <td>$fila[3]</td>
                                        <td>$fila[4]</td>
                                        <td>$fila[5]</td>
-                                       <td class=\"td-actions\"><span data-toggle=\"tooltip\" data-placement=\"top\" title=\"observar\" > <a data-toggle=\"modal\" href=\"tallass.php\"\" class=\"btn btn-small btn-success\"> <i class=\"btn-icon-only fas fa-eye\"> </i></a></span><span data-toggle=\"tooltip\" data-placement=\"top\" title=\"Editar\" > <a data-toggle=\"modal\" href=\"#modalEditar\" onclick=\"agregarForm('$datos');\" class=\"btn btn-small btn-primary\"> <i class=\"btn-icon-only fas fa-pen\"> </i></a></span><span data-toggle=\"tooltip\" data-placement=\"top\" title=\"Eliminar\" > <a href=\"#modalAbonar\"  onclick=\"agregarForm('$datos');\" data-toggle=\"modal\" class=\"btn btn-danger btn-small\"><i class=\"btn-icon-only fas fa-trash\"> </i></a></span></td>
+                                       <td>$fila[6]</td>
+                                       <td class=\"td-actions\"><span data-toggle=\"tooltip\" data-placement=\"top\" title=\"Editar\" > <a data-toggle=\"modal\" href=\"#modalEditar\" onclick=\"agregarForm('$datos');\" class=\"btn btn-small btn-primary\"> <i class=\"btn-icon-only fas fa-pen\"> </i></a></span><span data-toggle=\"tooltip\" data-placement=\"top\" title=\"Eliminar\" > <a href=\"#modalAbonar\"  onclick=\"agregarForm('$datos');\" data-toggle=\"modal\" class=\"btn btn-danger btn-small\"><i class=\"btn-icon-only fas fa-trash\"> </i></a></span></td>
 
                                      </tr>";
                                      // code...
@@ -104,8 +104,6 @@
                     ?>
                   </tbody>
                 </table>
-
-                </div>
               </div>
             </div>
           </div>
@@ -166,7 +164,7 @@
           </button>
         </div>
         <div class="modal-body">
-          <form action="usuariosControlador.php" method="post">
+          <form action="clientesControlador.php" method="post">
             <div class="row">
               <div class="form-group col-sm-12">
                 <input type="hidden" name="cedula"id="cedulaClienteEH" value="">
@@ -176,34 +174,12 @@
                 <input type="text" required class="form-control" id="nombresClienteE" name="nombre" placeholder="Nombres">
               </div>
               <div class="form-group col-md-12">
-                <input type="number" required class="form-control" id="telefonoClienteE" name="telefono" placeholder="telefono">
+                <input type="text" required class="form-control" id="direccionClienteE" name="direccion" placeholder="Direccion">
               </div>
               <div class="form-group col-md-12">
-                <input type="text" required class="form-control" id="passwordE" name="password" placeholder="password">
-              </div>
-              <div class="form-group col-md-12">
-                <input type="email" required class="form-control" id="emailE" name="email" placeholder="Email">
-              </div>
-
-              <div class="form-group col-md-12">
-              <select id="cargoE" name="cargo" class="form-control">
-                    <option selected>tipo de usuario</option>
-                    <option value="0">administrativo</option>
-                    <option value="1">monitor</option>
-                    <option value="2">tecnico reparador</option>
-
-                  </select>
-                
+                <input type="number" required class="form-control" id="telefonoClienteE" name="telefono" placeholder="Telefono">
               </div>
             </div>
-
-
-            
-
-
-
-            
-
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-warning" data-dismiss="modal">Cancelar</button>
@@ -226,7 +202,7 @@
           </button>
         </div>
         <div class="modal-body">
-          <form action="usuariosControlador.php" method="post">
+          <form action="clientesControlador.php" method="post">
             <div class="form-group">
               <input class="form-control" type="hidden"  name="cedula" id="cedulaEliminar">
             </div>
@@ -256,10 +232,8 @@
              $("#cedulaClienteEH").val(d[0]);
              $("#cedulaClienteE").val(d[0]);
              $("#nombresClienteE").val(d[1]);
-             $("#telefonoClienteE").val(d[2]);
-             $("#passwordE").val(d[3]);
-             $("#emailE").val(d[4]);
-             $("#cargoE").val(d[5]);
+             $("#direccionClienteE").val(d[2]);
+             $("#telefonoClienteE").val(d[3]);
              //valores eliminar
              $("#cedulaEliminar").val(d[0]);
           }

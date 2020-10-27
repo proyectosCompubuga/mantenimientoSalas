@@ -16,7 +16,7 @@ $util->validarRuta(0);
       <div class="card-header ">REPORTAR DAÑO</div>
       <div class="card-body">
         <h5 class="card-title">DATOS DEL REPORTE</h5>
-        <form action="registrarUsuariosControlador.php" method="post">
+        <form action="../crudReportes/reportesControlador.php" method="post">
 
           <div class="row">
             <div class="form-group col-md-6">
@@ -48,7 +48,7 @@ $util->validarRuta(0);
             <textarea class="form-control" required id="exampleFormControlTextarea1" rows="3"></textarea>
           </div>
 
-          <button type="submit" class="btn btn-primary">registrar</button>
+          <button name="reportar" type="submit" class="btn btn-primary">reportar</button>
         </form>
       </div>
     </div>
