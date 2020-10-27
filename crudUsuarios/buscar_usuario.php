@@ -41,8 +41,16 @@
           <!-- Earnings (Monthly) Card Example -->
          
           <!-- DataTales Example -->
+
+          <?php 
+          $busqueda = strtolower($_REQUEST['busqueda']);
+          if(empty($busqueda))
+          {
+                  header("location: usuariosVista.php");
+          }
+          ?>
           <form action="buscar_usuario.php" method="get" class="form_search">
-            <input type="text" name="busqueda" id="busqueda" placeholder="Buscar">
+            <input type="text" name="busqueda" id="busqueda" placeholder="Buscar" value="<?php echo $busqueda; ?>">
             <input type="submit" value="Buscar" class="btn-search">
             </form>
           <div class="card shadow mb-4">
@@ -76,13 +84,25 @@
                   </tfoot>
                   <tbody>
                     <?php
+                    $rol = '';
+                    if($busqueda == 'administrador')
+                    {
+                        $rol = "OR tipo de usuario LIKE '%0%' ";
+                    }else if($busqueda == 'monitor')
+                    {
+                        $rol = "OR tipo de usuario LIKE '%1%' ";
+                    }else if($busqueda == 'tecnico reparador')
+                    {
+                        $rol = "OR tipo de usuario LIKE '%2%' ";
+                    } 
+
                     $saldoCero=0;
                       $tabla = "usuarios";
                       $result = $utilModelo2->consultarVariasTablas("*",$tabla,"1");
                         while ($fila = mysqli_fetch_array($result)) {
                             if ($fila != NULL) {
                                   $datos=$fila[0]."||".
-        			        					   $fila[1]."||".
+        			        	   $fila[1]."||".
                                    $fila[2]."||".
                                    $fila[3]."||".
                                    $fila[4]."||".
@@ -95,7 +115,7 @@
                                        <td>$fila[3]</td>
                                        <td>$fila[4]</td>
                                        <td>$fila[5]</td>
-                                       <td class=\"td-actions\"><span data-toggle=\"tooltip\" data-placement=\"top\" title=\"observar\" > <a data-toggle=\"modal\" href=\"tallass.php\"\" class=\"btn btn-small btn-success\"> <i class=\"btn-icon-only fas fa-eye\"> </i></a></span><span data-toggle=\"tooltip\" data-placement=\"top\" title=\"Editar\" > <a data-toggle=\"modal\" href=\"#modalEditar\" onclick=\"agregarForm('$datos');\" class=\"btn btn-small btn-primary\"> <i class=\"btn-icon-only fas fa-pen\"> </i></a></span><span data-toggle=\"tooltip\" data-placement=\"top\" title=\"Eliminar\" > <a href=\"#modalAbonar\"  onclick=\"agregarForm('$datos');\" data-toggle=\"modal\" class=\"btn btn-danger btn-small\"><i class=\"btn-icon-only fas fa-trash\"> </i></a></span></td>
+                                       <td class=\"td-actions\"><span data-toggle=\"tooltip\" data-placement=\"top\" title=\"Editar\" > <a data-toggle=\"modal\" href=\"#modalEditar\" onclick=\"agregarForm('$datos');\" class=\"btn btn-small btn-primary\"> <i class=\"btn-icon-only fas fa-pen\"> </i></a></span><span data-toggle=\"tooltip\" data-placement=\"top\" title=\"Eliminar\" > <a href=\"#modalAbonar\"  onclick=\"agregarForm('$datos');\" data-toggle=\"modal\" class=\"btn btn-danger btn-small\"><i class=\"btn-icon-only fas fa-trash\"> </i></a></span></td>
 
                                      </tr>";
                                      // code...
@@ -104,8 +124,7 @@
                     ?>
                   </tbody>
                 </table>
-
-                </div>
+                
               </div>
             </div>
           </div>
