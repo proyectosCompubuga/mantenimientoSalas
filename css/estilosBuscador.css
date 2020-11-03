@@ -17,3 +17,27 @@
     cursor: pointer;
     margin-left: 10px;
 }
+/* paginador */
+.paginador ul{
+    padding: 15px;
+    list-style: none;
+    background: #fff;
+    margin-top: 15px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+}
+.paginador a{
+    color: #428bca;
+    border: 1px solid #ddd;
+    padding: 5px;
+    display: inline-block ;
+    font-size: 14px ;
+    text-align: center;
+    width: 35px;
+}
+.paginador a:hover{
+    background: #ddd;
+}

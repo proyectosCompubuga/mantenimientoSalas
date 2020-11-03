@@ -21,6 +21,7 @@
   <!-- Custom fonts for this template-->
   <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
 
   <!-- Custom styles for this template-->
   <link href="../css/sb-admin-2.min.css" rel="stylesheet">
@@ -46,15 +47,24 @@
             <div class="card-header py-3">
               <h6 class="m-0 font-weight-bold text-primary">Buscar Equipos</h6>
 
-              <form action="vistaEquipos.php" method="get" class="form_search">
+            <form action="vistaEquipos.php" method="get" class="form_search">
              <input type="text" name="busqueda" id="busqueda" placegolder="Buscar">
              <input type="submit" value="Buscar" class="btn_search">
+             <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
             </form>
             </div>
             <!-- <form action="registro_equipos.php" method="get" class="form_search">
              <input type="text" name="busqueda" id="busqueda" placegolder="Buscar">
              <input type="submit" value="Buscar" class="btn_search">
             </form>  -->
+            <script>
+            $(document).ready(function() {
+             $('#example').DataTable();
+           } );
+           <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+           </script>
+            
+
             <div class="card-body">
               <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -291,7 +301,18 @@
            $('[data-toggle="tooltip"]').tooltip()
          })
         </script>
-
+<div class="paginador">
+<ul>
+ <li><a href="#">|<</a></li>
+ <li><a href="#"><<</a></li>
+ <li><a href="#">1</a></li>
+ <li><a href="#">2</a></li>
+ <li><a href="#">3</a></li>
+ <li><a href="#">4</a></li>
+ <li><a href="#">5</a></li>
+ <li><a href="#">>></a></li>
+ <li><a href="#">>>|</a></li>
+</ul>
 </body>
 
 </html>

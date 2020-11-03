@@ -97,6 +97,23 @@
                   </tfoot>
                   <tbody>
                     <?php
+                    <!-- paginador -->
+                    $sql_registe = mysqli_query($conection,"SELECT COUNT(*)as total_registro FROM equipos WHERE estatus = 1")
+                    $result_register = mysqli_fetch_array($sql_registe);
+                    $total_registro = $result_register['total_registro'];
+
+                    $por_pagina = 10;
+                    if(empty($_GET['pagina']))
+                    {
+                      $pagina = 1;
+                    }else{
+                      $pagina = $_GET['pagina'];
+                    }
+
+                    $desde = ($pagina-1) * $por_pagina;
+                    $total_paginas = ceil($total_registro / $por_pagina);
+                    ?>
+                    <?php
                     $saldoCero=0;
                       $tabla = "equipos";
                       $result = $utilModelo2->consultarVariasTablas("*",$tabla,"1");
@@ -298,7 +315,18 @@
            $('[data-toggle="tooltip"]').tooltip()
          })
         </script>
-
+<div class="paginador">
+<ul>
+ <li><a href="#">|<</a></li>
+ <li><a href="#"><<</a></li>
+ <li><a href="#">1</a></li>
+ <li><a href="#">2</a></li>
+ <li><a href="#">3</a></li>
+ <li><a href="#">4</a></li>
+ <li><a href="#">5</a></li>
+ <li><a href="#">>></a></li>
+ <li><a href="#">>>|</a></li>
+</ul>
 </body>
 
 </html>
