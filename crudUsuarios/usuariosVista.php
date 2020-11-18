@@ -41,10 +41,6 @@
           <!-- Earnings (Monthly) Card Example -->
          
           <!-- DataTales Example -->
-          <form action="buscar_usuario.php" method="get" class="form_search">
-            <input type="text" name="busqueda" id="busqueda" placeholder="Buscar">
-            <input type="submit" value="Buscar" class="btn-search">
-            </form>
           <div class="card shadow mb-4">
             <div class="card-header py-3">
               <h6 class="m-0 font-weight-bold text-primary">Buscar Usuarios</h6>
@@ -95,7 +91,7 @@
                                        <td>$fila[3]</td>
                                        <td>$fila[4]</td>
                                        <td>$fila[5]</td>
-                                       <td class=\"td-actions\"><span data-toggle=\"tooltip\" data-placement=\"top\" title=\"observar\" > <a data-toggle=\"modal\" href=\"tallass.php\"\" class=\"btn btn-small btn-success\"> <i class=\"btn-icon-only fas fa-eye\"> </i></a></span><span data-toggle=\"tooltip\" data-placement=\"top\" title=\"Editar\" > <a data-toggle=\"modal\" href=\"#modalEditar\" onclick=\"agregarForm('$datos');\" class=\"btn btn-small btn-primary\"> <i class=\"btn-icon-only fas fa-pen\"> </i></a></span><span data-toggle=\"tooltip\" data-placement=\"top\" title=\"Eliminar\" > <a href=\"#modalAbonar\"  onclick=\"agregarForm('$datos');\" data-toggle=\"modal\" class=\"btn btn-danger btn-small\"><i class=\"btn-icon-only fas fa-trash\"> </i></a></span></td>
+                                       <td class=\"td-actions\"><span data-toggle=\"tooltip\" data-placement=\"top\" title=\"Editar\" > <a data-toggle=\"modal\" href=\"#modalEditar\" onclick=\"agregarForm('$datos');\" class=\"btn btn-small btn-primary\"> <i class=\"btn-icon-only fas fa-pen\"> </i></a></span><span data-toggle=\"tooltip\" data-placement=\"top\" title=\"Eliminar\" > <a href=\"#modalAbonar\"  onclick=\"agregarForm('$datos');\" data-toggle=\"modal\" class=\"btn btn-danger btn-small\"><i class=\"btn-icon-only fas fa-trash\"> </i></a></span></td>
 
                                      </tr>";
                                      // code...

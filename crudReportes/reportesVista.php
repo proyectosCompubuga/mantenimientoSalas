@@ -50,29 +50,29 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                     <tr>
-                      <th>Identificacion</th>
+                      <th># Reporte</th>
                       <th>id usuario</th>
-                      <th>id sala</th>
-                      <th>id reparacion</th>
-                      <th>fecha reporte</th>
+                      <th>id equipo</th>
                       <th>observacion</th>
+                      <th>fecha reporte</th>
                       <th>estado</th>
-                      <th class="td-actions">EDITAR/ELIMINAR</th>
+                      <th class="td-actions">Observar</th>
                     </tr>
                   </thead>
                   <tfoot>
                     <tr>
-                    <th>Identificacion</th>
+                    <th># Reporte</th>
                       <th>id usuario</th>
-                      <th>id sala</th>
-                      <th>id reparacion</th>
-                      <th>fecha reporte</th>
+                      <th>id equipo</th>
                       <th>observacion</th>
+                      <th>fecha reporte</th>
                       <th>estado</th>
-                      <th class="td-actions">EDITAR/ELIMINAR</th>
+                      <th class="td-actions">Observar</th>
                     </tr>
                   </tfoot>
                   <tbody>
+                      
+                     
                     <?php
                     $saldoCero=0;
                       $tabla = "reportes";
@@ -85,17 +85,17 @@
                                    $fila[3]."||".
                                    $fila[4]."||".
                                    $fila[5]."||";
-                                   $fila[6]."||";
+                                   
                                      echo"<tr>
 
-                                     <td>$fila[0]</td>
+                                      <td>$fila[0]</td>
                                        <td>$fila[1]</td>
                                        <td>$fila[2]</td>
                                        <td>$fila[3]</td>
                                        <td>$fila[4]</td>
                                        <td>$fila[5]</td>
-                                       <td>$fila[6]</td>
-                                       <td class=\"td-actions\"><span data-toggle=\"tooltip\" data-placement=\"top\" title=\"Editar\" > <a data-toggle=\"modal\" href=\"#modalEditar\" onclick=\"agregarForm('$datos');\" class=\"btn btn-small btn-primary\"> <i class=\"btn-icon-only fas fa-pen\"> </i></a></span><span data-toggle=\"tooltip\" data-placement=\"top\" title=\"Eliminar\" > <a href=\"#modalAbonar\"  onclick=\"agregarForm('$datos');\" data-toggle=\"modal\" class=\"btn btn-danger btn-small\"><i class=\"btn-icon-only fas fa-trash\"> </i></a></span></td>
+                                       
+                                       <td class=\"td-actions\"><span data-toggle=\"tooltip\" data-placement=\"top\" title=\"observar\" > <a  href=\"tallass.php\"\" class=\"btn btn-small btn-success\"> <i class=\"btn-icon-only fas fa-eye\"> </i></a></span></td>
 
                                      </tr>";
                                      // code...
