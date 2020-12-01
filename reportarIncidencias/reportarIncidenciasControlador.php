@@ -2,14 +2,13 @@
 @session_start();
 include '../util/utilModelo.php';
 
-$identificacion=$_POST['identificacion'];
-// $nombres=$_POST['nombre'] ." ". $_POST['apellido'];
-$idusuario$=$_POST['id_usuario'];
-$idsala=$_POST['id_sala'];
-$idrepa=0;
-$fechareporte=date(d/m/y);
-$observacion=$_POST['observacion'];
-$estado=0;
+$identificacion=$_POST['id_usuario'];
+$nombres=$_POST['nombre'] ." ". $_POST['apellido']; 
+$tel=$_POST['telefono'];
+$password=$_POST['password'];
+$pass2=$_POST['pass2'];
+$Email=$_POST['email'];
+$cargo=$_POST['cargo'];
 
 
     $utilModelo = new utilModelo();
