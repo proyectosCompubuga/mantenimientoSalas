@@ -144,6 +144,7 @@
                     $nombreCliente =$fila[1];
 
             }
+            
             return $nombreCliente;
         }
         function mostrarNombreProducto($codigo)
