@@ -47,6 +47,15 @@
 
           </div>
         </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="../registroEquipos/registrarEquiposVista.php" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Equipos
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="../crudEquipos/equiposVista.php">Lista de equipos</a>
+            <a class="dropdown-item" href="../registroEquipos/registrarEquiposVista.php">Registrar</a>
+          </div>
+        </li>
       </ul>
       <div class="navbar-collapse collapse">
         <ul class="navbar-nav ml-auto">
@@ -65,3 +74,4 @@
 
 
   </nav>
+  
