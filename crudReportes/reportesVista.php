@@ -51,8 +51,8 @@
                   <thead>
                     <tr>
                       <th># Reporte</th>
-                      <th>id usuario</th>
-                      <th>id equipo</th>
+                      <th>Nombre Usuario</th>
+                      <th>Nombre Equipo</th>
                       <th>observacion</th>
                       <th>fecha reporte</th>
                       <th>estado</th>
@@ -62,9 +62,9 @@
                   <tfoot>
                     <tr>
                     <th># Reporte</th>
-                      <th>id usuario</th>
-                      <th>id equipo</th>
-                      <th>observacion</th>
+                      <th>Nombre Usuario</th>
+                      <th>Nombre Equipo</th>
+                      <th>Observacion</th>
                       <th>fecha reporte</th>
                       <th>estado</th>
                       <th class="td-actions">Observar</th>
@@ -85,17 +85,22 @@
                                    $fila[3]."||".
                                    $fila[4]."||".
                                    $fila[5]."||";
-                                   
+
+                                   $result = $utilModelo2->consultarVariasTablas("nombre","usuarios","id_usuario=$fila[1]");
+                                   $nombre =mysqli_fetch_array($result);
+
+                                   $result = $utilModelo2->consultarVariasTablas("nombre_pc","equipos","id_equipo=$fila[2]");
+                                   $nombreEquipo =mysqli_fetch_array($result);
                                      echo"<tr>
 
                                       <td>$fila[0]</td>
-                                       <td>$fila[1]</td>
-                                       <td>$fila[2]</td>
+                                       <td>$nombre[0]</td>
+                                       <td>$nombreEquipo[0]</td>
                                        <td>$fila[3]</td>
                                        <td>$fila[4]</td>
                                        <td>$fila[5]</td>
                                        
-                                       <td class=\"td-actions\"><span data-toggle=\"tooltip\" data-placement=\"top\" title=\"observar\" > <a  href=\"tallass.php\"\" class=\"btn btn-small btn-success\"> <i class=\"btn-icon-only fas fa-eye\"> </i></a></span></td>
+                                       <td class=\"td-actions\"><span data-toggle=\"tooltip\" data-placement=\"top\" title=\"observar\" > <a  href=\"../formulario/formularioVista.php?id_reporte=$fila[0]\"\" class=\"btn btn-small btn-success\"> <i class=\"btn-icon-only fas fa-eye\"> </i></a></span></td>
 
                                      </tr>";
                                      // code...

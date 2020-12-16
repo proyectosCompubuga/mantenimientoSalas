@@ -83,14 +83,32 @@
                                    $fila[3]."||".
                                    $fila[4]."||".
                                    $fila[5]."||";
+                                    $tipo="";
+                                   switch ($fila[5]) {
+                                    case 0:
+                                      $tipo="ADMINISTRATIVO";
+                                      break;
+                                    case 1:
+                                      $tipo="MONITOR";
+                                      break;
+                                    case 2:
+                                      $tipo="TECNICO REPARADOR";
+                                      break;
+                                    default:
+                                      
+                                      break;
+                                  }
+
                                      echo"<tr>
+
+                                     
 
                                      <td>$fila[0]</td>
                                        <td>$fila[1]</td>
                                        <td>$fila[2]</td>
                                        <td>$fila[3]</td>
                                        <td>$fila[4]</td>
-                                       <td>$fila[5]</td>
+                                       <td>$tipo</td>
                                        <td class=\"td-actions\"><span data-toggle=\"tooltip\" data-placement=\"top\" title=\"Editar\" > <a data-toggle=\"modal\" href=\"#modalEditar\" onclick=\"agregarForm('$datos');\" class=\"btn btn-small btn-primary\"> <i class=\"btn-icon-only fas fa-pen\"> </i></a></span><span data-toggle=\"tooltip\" data-placement=\"top\" title=\"Eliminar\" > <a href=\"#modalAbonar\"  onclick=\"agregarForm('$datos');\" data-toggle=\"modal\" class=\"btn btn-danger btn-small\"><i class=\"btn-icon-only fas fa-trash\"> </i></a></span></td>
 
                                      </tr>";

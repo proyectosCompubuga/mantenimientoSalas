@@ -4,16 +4,16 @@
 
 
 <div class="container mt-5">
-  <div class="col-md-5 offset-md-3">
+  <div class="col-md-10 offset-md-1">
     <div class="card bg-light mb-3">
-      <div class="card-header ">FORMULARIO</div>
+      <div class="card-header ">REPORTE</div>
       <div class="card-body">
         <h5 class="card-title"></h5>
         <form action="reparacionControlador.php" method="post">
 
          
          
-        <div class="card text-white bg-secondary mb-3" style="max-width: 25rem;">
+        <div class="card text-white bg-secondary mb-3">
         <div class="card-body">
         <h5 class="card-title">DATOS DE REPORTE</h5>
         <p class="card-text">id reporte:123   id usuario:675    id sala:543<br>
@@ -23,7 +23,7 @@
 
 
 
-         <div class="card text-white bg-secondary mb-3" style="max-width: 25rem;">
+         <div class="card text-white bg-secondary mb-3" >
         <div class="card-body">
         <h5 class="card-title">DATOS DE EQUIPO</h5>
         <p class="card-text">id equipo:s2-equipo4  nombre pc:Asus procesador:core i7-3700x<br>
