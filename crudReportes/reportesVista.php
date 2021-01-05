@@ -86,11 +86,27 @@
                                    $fila[4]."||".
                                    $fila[5]."||";
 
-                                   $result = $utilModelo2->consultarVariasTablas("nombre","usuarios","id_usuario=$fila[1]");
-                                   $nombre =mysqli_fetch_array($result);
+                                   $tipo="";
+                                   switch ($fila[5]) {
+                                    case 0:
+                                      $tipo="ACTIVO";
+                                      break;
+                                    case 1:
+                                      $tipo="EN PROCESO";
+                                      break;
+                                    case 2:
+                                      $tipo="REPARADO";
+                                      break;
+                                    default:
+                                      
+                                      break;
+                                  }
 
-                                   $result = $utilModelo2->consultarVariasTablas("nombre_pc","equipos","id_equipo=$fila[2]");
-                                   $nombreEquipo =mysqli_fetch_array($result);
+                                   $resultNombre = $utilModelo2->consultarVariasTablas("nombre","usuarios","id_usuario=$fila[1]");
+                                   $nombre =mysqli_fetch_array($resultNombre);
+
+                                   $resultEquipo = $utilModelo2->consultarVariasTablas("nombre_pc","equipos","id_equipo=$fila[2]");
+                                   $nombreEquipo =mysqli_fetch_array($resultEquipo);
                                      echo"<tr>
 
                                       <td>$fila[0]</td>
@@ -98,7 +114,7 @@
                                        <td>$nombreEquipo[0]</td>
                                        <td>$fila[3]</td>
                                        <td>$fila[4]</td>
-                                       <td>$fila[5]</td>
+                                       <td>$tipo</td>
                                        
                                        <td class=\"td-actions\"><span data-toggle=\"tooltip\" data-placement=\"top\" title=\"observar\" > <a  href=\"../formulario/formularioVista.php?id_reporte=$fila[0]\"\" class=\"btn btn-small btn-success\"> <i class=\"btn-icon-only fas fa-eye\"> </i></a></span></td>
 
