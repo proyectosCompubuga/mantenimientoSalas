@@ -20,7 +20,7 @@ $Abreviatura=$_POST["Abreviatura"];
     $utilModelo -> insertar($nombreDeTabla,$campos,$valores);
 
 $_SESSION['mensajeOk']="ok";
-//header('Location: ../formularioSalas/formularioSalasControlador.php');
+header('Location: ../crudSalas/salasVista.php');
 
 exit();
 ?>

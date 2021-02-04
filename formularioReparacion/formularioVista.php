@@ -17,7 +17,7 @@ include_once "../componentes/menuPrincipal.php"; ?>
       <div class="card-body ">
         <h5 class="card-title "></h5>
         <h2>Datos del reporte</h2>
-        <form action="reparacionControlador.php" method="post">
+        <form action="formularioControlador.php" method="post">
           <div class="row">
 
             <div class="col-md-4 imagen ">
@@ -98,8 +98,7 @@ include_once "../componentes/menuPrincipal.php"; ?>
               ?>
             </div>
           </div>
-
-        </form>
+     
 
       </div>
     </div>
@@ -117,7 +116,6 @@ include_once "../componentes/menuPrincipal.php"; ?>
       <div class="card-body ">
         <h5 class="card-title "></h5>
         <h2>Datos del equipo</h2>
-        <form action="reparacionControlador.php" method="post">
           <div class="row">
 
             <div class="col-md-4 imagen ">
@@ -197,19 +195,22 @@ include_once "../componentes/menuPrincipal.php"; ?>
       <div class="form-group col-md-12">
       <h4>Estado</h4>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1">
             <label class="form-check-label" for="inlineRadio1">Pendiente</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="2">
             <label class="form-check-label" for="inlineRadio1">Reparado</label>
           </div>
         <h5 class="mt-4">Observacion </h5>
         <textarea class="form-control" id="observacion " name="Observacion" rows="4"></textarea>
       </div>
 
+      <?php echo"<input name='idReporte' type='hidden' value='$idReporte'>";  ?>
+
+
       <div class="form-group col-md-6">
-        <button type="submit" class="btn btn-primary">Enviar</button>
+        <button name="guardar" type="submit" class="btn btn-primary">Enviar</button>
         <button type="button" onclick="javascript:window.print()">Imprimir</button>
 
 

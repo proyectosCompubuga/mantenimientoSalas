@@ -18,6 +18,6 @@ $Observacion=$_POST["Observacion"];
     $utilModelo -> insertar($nombreDeTabla,$campos, $valores);
 
 $_SESSION['mensajeOk']="ok";
-//header('Location: ../reparacion/reparacionControlador.php');
+// header('Location: ../reparacion/reparacionControlador.php');
 exit();
 ?>

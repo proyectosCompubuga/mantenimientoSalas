@@ -28,13 +28,20 @@
             Salas
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="../reportarIncidencias/reportarIncidenciasVista.php">Registrar</a>
-            <a class="dropdown-item " href="../crudReportes/reportesVista.php">Ver Salas</a>
+            <a class="dropdown-item" href="../formularioSalas/formularioSalasVista.php">Registrar</a>
+            <a class="dropdown-item " href="../crudSalas/salasVista.php">Ver Salas</a>
 
           </div>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../reportarIncidencias/reportarIncidenciasVista.php">Reportar</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Reportar
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="../reportarIncidencias/reportarIncidenciasVista.php">Reportar</a>
+            <a class="dropdown-item " href="../crudReportes/reportesVista.php">Ver Reportes</a>
+
+          </div>
         </li>
 
         <li class="nav-item dropdown">

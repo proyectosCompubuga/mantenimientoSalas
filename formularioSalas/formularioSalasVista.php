@@ -9,7 +9,7 @@
       <div class="card-header ">FORMULARIO SALAS </div>
       <div class="card-body">
         <h5 class="card-title">DATOS SALAS</h5>
-         <form action="formularioSalasControlador.php" method="post">
+         <form action="../crudSalas/salasControlador.php" method="post">
 
 
          <div class="form-row">
@@ -44,7 +44,7 @@
 
 
             <div class="form-group col-md-6"> 
-                <button type="submit" class="btn btn-primary">Enviar</button>
+                <button name="guardar" type="submit" class="btn btn-primary">Enviar</button>
                 
           </form>
       </div>

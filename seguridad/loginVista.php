@@ -18,7 +18,8 @@ if (isset($_SESSION['usuario'])) {
     <title>Compubuga.com</title>
 </head>
 
-<body  style="background-image: url('https://cdn.pixabay.com/photo/2017/08/10/10/51/atomic-bomb-2621291_960_720.jpg');">
+
+<body  style="background-image: url('https://cdn.pixabay.com/photo/2017/07/31/11/21/people-2557396_960_720.jpg');">
      <div class="container-fluid">
         <div class="container offset-md-8 mt-4 pt-4">
             <div class="card border-success mb-3" style="max-width: 22rem;">

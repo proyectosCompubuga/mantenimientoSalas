@@ -5,26 +5,26 @@
     $util = new util();
     $util->validarRuta(0);
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
 
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+<title>Calzado Karol Bucaramanga</title>
 
-  <title>datos</title>
+<!-- Custom fonts for this template-->
+<link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
-  <!-- Custom fonts for this template-->
-  <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-
-  <!-- Custom styles for this template-->
-  <link href="../css/sb-admin-2.min.css" rel="stylesheet">
-  <!-- Latest compiled and minified CSS -->
+<!-- Custom styles for this template-->
+<link href="../css/sb-admin-2.min.css" rel="stylesheet">
+<!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
 <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 <link rel="stylesheet" href="../css/estilos.css">
@@ -37,86 +37,57 @@
 
 
           <!-- Page Heading -->
-          <h1 class="h3 mb-4 text-gray-800">Reportes</h1>
+          <h1 class="h3 mb-4 text-gray-800">Salas</h1>
           <!-- Earnings (Monthly) Card Example -->
          
           <!-- DataTales Example -->
-          <div class="card shadow mb-4">
-            <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Buscar reporte</h6>
-            </div>
+          
             <div class="card-body">
               <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                     <tr>
-                      <th># Reporte</th>
-                      <th>Nombre Usuario</th>
-                      <th>Nombre Equipo</th>
-                      <th>observacion</th>
-                      <th>fecha reporte</th>
-                      <th>estado</th>
-                      <th class="td-actions">Observar</th>
+                      <th>sala</th>
+                      <th>Nombre sala</th>
+                      <th>capacidad de equipos</th>
+                      <th>cantidad de equipos</th>
+                      <th>abreviatura</th>                    
+                    <th class="td-actions">EDITAR/ELIMINAR</th>
                     </tr>
                   </thead>
                   <tfoot>
                     <tr>
-                    <th># Reporte</th>
-                      <th>Nombre Usuario</th>
-                      <th>Nombre Equipo</th>
-                      <th>Observacion</th>
-                      <th>fecha reporte</th>
-                      <th>estado</th>
-                      <th class="td-actions">Observar</th>
+                      <th>sala</th>
+                      <th>Nombre sala</th>
+                      <th>capacidad de equipos</th>
+                      <th>cantidad de equipos</th>
+                      <th>abreviatura</th> 
+                      <th class="td-actions">EDITAR/ELIMINAR</th>
                     </tr>
                   </tfoot>
                   <tbody>
-                      
-                     
                     <?php
                     $saldoCero=0;
-                      $tabla = "reportes";
+                      $tabla = "sala";
                       $result = $utilModelo2->consultarVariasTablas("*",$tabla,"1");
                         while ($fila = mysqli_fetch_array($result)) {
                             if ($fila != NULL) {
-                                  $datos=$fila[0]."||".
-        			        					   $fila[1]."||".
+                                   $datos=$fila[0]."||".
+        			        	   $fila[1]."||".
                                    $fila[2]."||".
                                    $fila[3]."||".
-                                   $fila[4]."||".
-                                   $fila[5]."||";
-
-                                   $tipo="";
-                                   switch ($fila[5]) {
-                                    case 0:
-                                      $tipo="ACTIVO";
-                                      break;
-                                    case 1:
-                                      $tipo="EN PROCESO";
-                                      break;
-                                    case 2:
-                                      $tipo="REPARADO";
-                                      break;
-                                    default:
-                                      
-                                      break;
-                                  }
-
-                                   $resultNombre = $utilModelo2->consultarVariasTablas("nombre","usuarios","id_usuario=$fila[1]");
-                                   $nombre =mysqli_fetch_array($resultNombre);
-
-                                   $resultEquipo = $utilModelo2->consultarVariasTablas("nombre_pc","equipos","id_equipo=$fila[2]");
-                                   $nombreEquipo =mysqli_fetch_array($resultEquipo);
+                                   $fila[4]."||";
+                                   
                                      echo"<tr>
 
-                                      <td>$fila[0]</td>
-                                       <td>$nombre[0]</td>
-                                       <td>$nombreEquipo[0]</td>
+                                     
+
+                                     <td>$fila[0]</td>
+                                       <td>$fila[1]</td>
+                                       <td>$fila[2]</td>
                                        <td>$fila[3]</td>
-                                       <td>$fila[4]</td>
-                                       <td>$tipo</td>
-                                       
-                                       <td class=\"td-actions\"><span data-toggle=\"tooltip\" data-placement=\"top\" title=\"observar\" > <a  href=\"../formularioReparacion/formularioVista.php?id_reporte=$fila[0]\"\" class=\"btn btn-small btn-success\"> <i class=\"btn-icon-only fas fa-eye\"> </i></a></span></td>
+                                       <td>$fila[4]</td>                                                                              
+                                       <td class=\"td-actions\"><span data-toggle=\"tooltip\" data-placement=\"top\" title=\"Editar\" > <a data-toggle=\"modal\" href=\"#modalEditar\" onclick=\"agregarForm('$datos');\" class=\"btn btn-small btn-primary\"> <i class=\"btn-icon-only fas fa-pen\"> </i></a></span><span data-toggle=\"tooltip\" data-placement=\"top\" title=\"Eliminar\" > <a href=\"#modalAbonar\"  onclick=\"agregarForm('$datos');\" data-toggle=\"modal\" class=\"btn btn-danger btn-small\"><i class=\"btn-icon-only fas fa-trash\"> </i></a></span></td>
 
                                      </tr>";
                                      // code...
@@ -125,6 +96,8 @@
                     ?>
                   </tbody>
                 </table>
+
+                </div>
               </div>
             </div>
           </div>
@@ -185,22 +158,37 @@
           </button>
         </div>
         <div class="modal-body">
-          <form action="clientesControlador.php" method="post">
+          <form action="salasControlador.php" method="post">
             <div class="row">
-              <div class="form-group col-sm-12">
-                <input type="hidden" name="cedula"id="cedulaClienteEH" value="">
-                <input type="number" required disabled class="form-control" id="cedulaClienteE"  placeholder="Identificacion">
+            <div class="form-group col-sm-12">
+                <input type="hidden" name="sala"id="salaEH" value="">
+                <input type="number" required disabled class="form-control" id="salaE"  placeholder="sala">
                 </div>
+        
               <div class="form-group col-md-12">
-                <input type="text" required class="form-control" id="nombresClienteE" name="nombre" placeholder="Nombres">
+                <input type="text" required class="form-control" id="nombreE" name="nombre" placeholder="nombre sala">
               </div>
               <div class="form-group col-md-12">
-                <input type="text" required class="form-control" id="direccionClienteE" name="direccion" placeholder="Direccion">
+                <input type="text" required class="form-control" id="capacidadE" name="capacidad" placeholder="capacidad de equipos">
               </div>
               <div class="form-group col-md-12">
-                <input type="number" required class="form-control" id="telefonoClienteE" name="telefono" placeholder="Telefono">
+                <input type="text" required class="form-control" id="cantidadE" name="cantidad" placeholder="cantidad de equipos">
               </div>
+              <div class="form-group col-md-12">
+                <input type="text" required class="form-control" id="abreviaturaE" name="abreviatura" placeholder="abreviatura">
+              </div>
+              
+
+              
             </div>
+
+
+            
+
+
+
+            
+
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-warning" data-dismiss="modal">Cancelar</button>
@@ -223,7 +211,7 @@
           </button>
         </div>
         <div class="modal-body">
-          <form action="clientesControlador.php" method="post">
+          <form action="usuariosControlador.php" method="post">
             <div class="form-group">
               <input class="form-control" type="hidden"  name="cedula" id="cedulaEliminar">
             </div>
@@ -252,9 +240,10 @@
             //valores editar
              $("#cedulaClienteEH").val(d[0]);
              $("#cedulaClienteE").val(d[0]);
-             $("#nombresClienteE").val(d[1]);
-             $("#direccionClienteE").val(d[2]);
-             $("#telefonoClienteE").val(d[3]);
+             $("#nombreE").val(d[1]);
+             $("#capacidadE").val(d[2]);
+             $("#cantidadE").val(d[3]);
+             $("#abrevuaturaE").val(d[4]);
              //valores eliminar
              $("#cedulaEliminar").val(d[0]);
           }
